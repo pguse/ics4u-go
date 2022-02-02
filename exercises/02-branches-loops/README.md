@@ -17,6 +17,7 @@ func main() {
 	a, b := 10, 15
 
 	// Is at least one value even?
+	// Note != is the NOT EQUAL TO operator
 	if a%2 == 0 || b%2 == 0 {
 		fmt.Println("YES")
 	} else {
