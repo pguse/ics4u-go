@@ -42,10 +42,10 @@ import "fmt"
 
 func main() {
 	// Declare another variable with its value
-	a, b := 10, 15
+	a, b, c := 10, 15, 20
 
-	// Is at least one value even?
-	if a%2 == 0 || b%2 == 0 {
+	// Are these values descending?
+	if a > b && b > c {
 		fmt.Println("YES")
 	} else {
 		fmt.Println("NO")
