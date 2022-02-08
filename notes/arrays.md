@@ -1,7 +1,7 @@
 # Arrays
 In computer program, we sometimes want to store groups of related items. In Go, we can use arrays for this purpose.
 
-An array is an ordered sequence of values.  The values in an array are called _elements_ or sometimes _items_. There are several ways to create a new array; the simplest is the enclose elements in curly braces {}
+An array is an ordered sequence of values.  The values in an array are called _elements_ or sometimes _items_. There are several ways to create a new array; the simplest is to enclose elements in curly braces {}
 
 ## Creating Simple Arrays
 
