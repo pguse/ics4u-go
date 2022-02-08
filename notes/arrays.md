@@ -96,8 +96,6 @@ fmt.Println(values)
 
 A **for loop** can be used to to traverse the elements of an array. For example, the following code moves through the elements of an array of marks and adds them to an existing **sum**.  
 
-## Example 1:
-
 ```go
 package main
 
