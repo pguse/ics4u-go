@@ -62,7 +62,7 @@ Now the **numbers** array looks like this.
 [6 28 496 89]
 ```
 
-## Working with Arrays
+## Length of an Array
 
 Go provides the **len()** function that returns the length of an array."
 
