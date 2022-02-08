@@ -16,7 +16,7 @@ func main() {
 
 And here is how you would run the program,
 
-![Running a Go Program](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Running a Go Program")
+![Running a Go Program](https://github.com/pguse/ics4u-go/blob/main/notes/01-intro/goRun.png "Running a Go Program")
 
 In the code above, the **package** keyword declares the package this code belongs to.  All Go code must belong to a package.  Each package corresponds to a single idea or concept.
 
