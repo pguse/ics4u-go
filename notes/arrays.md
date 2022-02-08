@@ -139,3 +139,8 @@ func main(){
   fmt.Println(marks)
 }
 ```
+
+**Output:**
+```
+[75 90 80]
+```
