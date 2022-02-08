@@ -44,6 +44,11 @@ The syntax for accessing the elements of an array uses the **bracket operator []
 fmt.Println(cheeses[0])
 ```
 
+**Output:**
+```
+Cheddar
+```
+
 The phrase **arrays are mutable** means that we are able to change an element of an array.  For example,
 
 ```go
@@ -70,7 +75,7 @@ fmt.Println(len(cheeses))
 5
 ```
 
-When copying an array to another array in other languages like c/c++/python, the language used to pass a **reference** to the array, and any changes made in the copied array used to change the original array.
+When copying an array to another array in other languages like c/c++/python, a **reference** to the array is copied, and any changes made in the copied array will change the original array.  In Go this is called a **pointer**.  We will discuss **pointers** in a later note.
 
 However, in Go when an array is copied to another variable a new independent copy is created.  Making a change to either array does not affect the other one.  For example,
 
@@ -86,13 +91,10 @@ fmt.Println(values)
 [6 28 19 89]
 [6 28 496 89]
 ```
-## For Loops
 
-A **for loop** can be used to to traverse the elements of an array. For example, the following code creates and array of even numbers, given an initial empty array."
+## For loops - Traversing an Array
 
-# Arrays
-
-Consider the following example code:
+A **for loop** can be used to to traverse the elements of an array. For example, the following code moves through the elements of an array of marks and adds them to an existing **sum**.  
 
 ## Example 1:
 
@@ -104,8 +106,9 @@ import "fmt"
 func main() {
 	marks := [3]int{85, 95, 82} // Declare Array with 3 elements
 
-	// Using a for-loop to add up the marks in the
+	// Using a for-loop to add up the marks in the array
 	sum := 0
+
 	for i := 0; i < len(marks); i++ {
 		sum = sum + marks[i]
 	}
