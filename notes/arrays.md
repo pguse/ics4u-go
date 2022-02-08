@@ -36,6 +36,10 @@ fmt.Printf("%T", cheeses)
 
 This array has size 5 and contains values of type **string**."
 
+###Important
+
+Arrays have a **fixed length**.  Once you create an array of a particular size, the size cannot be changed.
+
 ## Arrays are Mutable
 
 The syntax for accessing the elements of an array uses the **bracket operator []**.  Like a number of computer languages, the indices of an array in Go start at 0.
