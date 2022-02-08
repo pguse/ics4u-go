@@ -24,7 +24,7 @@ fmt.Printf("%T", numbers)
 The type of array is composed of a number, representing its size, and a data type.  The number indicates the size. In our example the elements are of type **int** and the array has 4 elements.  Unlike other pieces of data, such as integers and floats, the size of an array is inherently part of its type.  Here is another example of an array.
 
 ```go
-var cheeses = [5]string{"Cheddar", "Edam", "Gouda", "Havarti", "Mozzarella"}
+cheeses := [5]string{"Cheddar", "Edam", "Gouda", "Havarti", "Mozzarella"}
 
 fmt.Printf("%T", cheeses)
 ```
