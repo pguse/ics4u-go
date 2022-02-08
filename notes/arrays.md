@@ -36,7 +36,7 @@ fmt.Printf("%T", cheeses)
 
 This array has size 5 and contains values of type **string**."
 
-###Important
+### Important
 
 Arrays have a **fixed length**.  Once you create an array of a particular size, the size cannot be changed.
 
