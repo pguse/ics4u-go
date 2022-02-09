@@ -39,13 +39,13 @@ Write a function called **hypotenuse(a, b float64) float64** that calculates and
 Write a function called **distance(x1, y1, x2, y2 float64) float64** that calculates and **returns** a **float64** representing the distance between the points (x1,y1) and (x2,y2).
 
 ## 04-4: Prime
-Write a function called **isPrime(num uint) bool** that determines whether an unsigned integer **num** is prime and **returns** a **bool** value ... either **true** or **false** . 
+Write a function called **isPrime(num int) bool** that determines whether an integer **num** is prime and **returns** a **bool** value ... either **true** or **false** . 
 
 ## 04-5: Greatest Common Divisor
-Write a function called **gcd(m, n uint) uint** that **returns** an **uint** representing the greatest common divisor of the numbers m and n, assuming m > n. The best-known algorithm for finding a greatest common divisor is Euclid’s Algorithm. Euclid’s Algorithm states that the greatest common divisor of two integers m and n is 
+Write a function called **gcd(m, n int) int** that **returns** an **int** representing the greatest common divisor of the numbers m and n, assuming m > n. The best-known algorithm for finding a greatest common divisor is Euclid’s Algorithm. Euclid’s Algorithm states that the greatest common divisor of two integers m and n is 
 
-* n if n divides m evenly.
-* However, if n does not divide m evenly, then the answer is the **greatest common divisor** of n and the **remainder** of m divided by n.
+* n if n divides into m completely.
+* However, if n does not divide into m completely, then the answer is the **greatest common divisor** of n and the **remainder** of m divided by n.
 
 Use the following starter code to start these exercises,
 
@@ -58,7 +58,6 @@ func main() {
 	fmt.Printf("Slope between (1,2) and (3,6): %0.2f\n", slope(1, 2, 3, 6))
 	fmt.Printf("Hypotenuse - base: 3; height: 4: %0.2f\n", hypotenuse(3, 4))
 	fmt.Printf("Distance between (1,2) and (7,10): %0.2f\n", distance(1, 2, 7, 10))
-	fmt.Printf("Slope between (1,2) and (3,6): %0.2f\n", slope(1, 2, 3, 6))
 	fmt.Printf("Is 15 prime? %t\n", isPrime(15))
 	fmt.Printf("GCD of 48 and 36: %d\n", gcd(48, 36))
 }
@@ -75,11 +74,11 @@ func distance(x1, y1, x2, y2 float64) float64 {
 	return 0.0
 }
 
-func isPrime(num uint) bool {
+func isPrime(num int) bool {
 	return false
 }
 
-func gcd(m, n uint) uint {
+func gcd(m, n int) int {
 	return 0
 }
 ```
