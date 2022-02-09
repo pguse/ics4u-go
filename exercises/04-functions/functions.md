@@ -8,7 +8,7 @@ package main
 import "fmt"
 
 func main(){
-    marks := [3]int{75,80,90}; // Declare Array with 3 elements
+    marks := [3]int{75,80,90}; // declare array with 3 elements
     fmt.Prinf("Your average is: %0.2f", mean(marks))
 }
 
