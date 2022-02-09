@@ -1,8 +1,8 @@
 # Arrays
 
-## Exercises
+In Visual Studio Code, create a folder called **BranchesLoops** and then open it. Now open a new Terminal window. 
 
-Create a folder called **Arrays**.
+## Exercises
 
 ## 03-0: Student Average
 

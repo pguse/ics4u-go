@@ -1,8 +1,8 @@
 # Branches and Loops
 
-## Exercises
-
 In Visual Studio Code, create a folder called **BranchesLoops** and then open it. Now open a new Terminal window. 
+
+## Exercises
 
 ## 02-0: At Least One Odd Number?
 In Visual Studio Code, create a new file in **BranchesLoops** called *atLeastOneOdd.go*.  Use the source code provided below as starter code in your file.

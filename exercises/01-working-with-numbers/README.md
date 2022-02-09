@@ -1,11 +1,12 @@
 # Working with Numbers
 
+In Visual Studio Code, create a folder called **Numbers** and then open it. Now open a new Terminal window. 
+
 ## Exercises
 
 ## 01-0: Student Average
 
-1.  In Visual Studio Code, create a folder called **Numbers** and then open it. Now open a new Terminal window. 
-2.  Create a new file called *average.go* with the following source code
+Create a new file called *average.go* with the following source code
 
 ```go
 package main
