@@ -7,18 +7,17 @@ package main
 
 import "fmt"
 
-func main(){
-    marks := [3]int{75,80,90}; // declare array with 3 elements
-    fmt.Prinf("Your average is: %0.2f", mean(marks))
+func main() {
+	marks := [3]float64{75, 80, 90} // Declare Array with 3 elements
+	fmt.Printf("Your average is: %0.2f", mean(marks))
 }
 
-func mean(a [3]int) float64 {
-    sum := 0
-    for i := 0; i < len(a); i++)
-    {
-        sum = sum + a[i]
-    }
-    return float64(sum) / len(a)
+func mean(a [3]float64) float64 {
+	sum := 0.0
+	for i := 0; i < len(a); i++ {
+		sum = sum + a[i]
+	}
+	return sum / float64(len(a))
 }
 ```
 Notice the creation of the function:  **mean**.  It has a few characteristics that need to be pointed out.  Notice that in this example there is one input **parameter** required ... an **array of integers of size 3** called **a** _(declared within the parentheses)_.  Notice the **return type** ... in this case **float64** _(declared after the parentheses)_.  The value of the calculation is returned from the function using the keyword **return**.  If you look in the **main** function, the **mean** function acts like a variable except that an array called marks is passed into it.  Its return value is output using the **Printf** function.
