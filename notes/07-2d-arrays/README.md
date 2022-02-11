@@ -5,7 +5,7 @@ A **1 dimensional array** is a **linear** representation of elements.  It repres
 ```go
 v := [5]int[4, 5, -3, 0, 7]
 ```
-where each element of the array can be accessed by an ordered **index** starting from 0.  For example:"
+where each element of the array can be accessed by an ordered **index** starting from 0.  For example:
 
 v[3]
 
