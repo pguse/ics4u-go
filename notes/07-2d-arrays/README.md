@@ -7,7 +7,9 @@ v := [5]int[4, 5, -3, 0, 7]
 ```
 where each element of the array can be accessed by an ordered **index** starting from 0.  For example:
 
+```go
 v[3]
+```
 
 A **2 dimensional array** is a representation of items in the form of **rows** and **columns**.  This is called a **tabular** representation of data.  Elements in a matrix 2D array are accessed by using a **row** and **column** index.  Another way to think of a 2D array, is an array of arrays.  For example,
 
