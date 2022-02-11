@@ -11,7 +11,7 @@ This project demonstrates how you might use a single-dimensional array in Go t
 
 ## Board Setup
 
-The **grid** array is filled initially with the values ```X```, ```O```, or ```-```.  In this game, this value will represent an empty square and be displayed as ```-```.  See the starter code below.
+The **board** array is filled initially with the values ```X```, ```O```, or ```-```.  In this game, this value will represent an empty square and be displayed as ```-```.  See the starter code below.
 
 ```go
 package main
