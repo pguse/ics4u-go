@@ -106,7 +106,7 @@ func initArray() [3][3]int {
 }
 ```
 
-The Intn() function returns, as an **int**, a non-negative pseudo-random number in the half-open interval [0,n).
+The **Intn** function returns, as an **int**, a non-negative pseudo-random number in the half-open interval [0,n).
 
 ## Slices
 
