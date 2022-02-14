@@ -1,4 +1,4 @@
-# Functions
+# 2D Arrays
 
 In Visual Studio Code, create a folder called **2D Arrays** and then open it. Now open a new Terminal window. 
 
