@@ -42,7 +42,7 @@ The output is unchanged.
 An element in a **2D array** is accessed by using the **row** and **column** values as follows:
 
 ```go
-fmt.Prinln([2][1])
+fmt.Println(m[2][1])
 ```
 
 produces the output
