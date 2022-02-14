@@ -49,7 +49,7 @@ func scalar(m [3][3]int, k int) [3][3]int {
 }
 ```
 
-## 6 - Sum of Neighbours
+## 6 - Sum of Neighbours _(Optional)_
 
 Create a function called **sumNeighbours** that finds the sum of the neighbours of any value in the position _(row,col)_ of a 3x3 2-dimensional array.  A neighbour is any value left, right, above, below, or diagonal to the position _(row,col)_.  The function should return the number of neighbours."
 
