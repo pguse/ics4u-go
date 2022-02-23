@@ -18,7 +18,10 @@ func randMatrix() [3][3]int {
 Create a function called **find** that searches for an integer **x** in a 3x3 integer array **m**.  It should return the position **row, col** if it finds it, otherwise it returns **-1,-1**.
 
 ```go
-func find(m [3][3]int, x int) int, int {
+func find(m [3][3]int, x int) (int, int) {
+    r, c := -1, -1
+    // Search for x using a nested loop
+    return r, c
 }
 ```
 
