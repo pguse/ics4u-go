@@ -24,6 +24,7 @@ produces the output
 ```
 [87 65 92 99]
 ```
+
 ## Using Slices in Functions
 
 Passing a slice into a function allows you to create a single function that acts on variable length sequences of values.  The following function,
