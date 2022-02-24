@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func main() {
@@ -13,10 +14,18 @@ func main() {
 	fmt.Println(a)
 }
 
+func selSort(values []int) []int {
+	return []int{}
+}
+
+func bubSort(values []int) []int {
+	return []int{}
+}
 func shuffle(values []int) []int {
 	m := make([]int, len(values))
 	copy(m, values)
 	for i := range m {
+		rand.Seed(time.Now().Unix())
 		n := rand.Intn(len(m))
 		swap := m[i]
 		m[i] = m[n]
