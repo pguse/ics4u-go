@@ -20,8 +20,8 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 ## Sorting Exercises
 
-1. **Selection Sort**. Write a function called selSort(a []int) that will sort a slice **a** of integers , using the selection sort algorithm described above, and **return a sorted slice**.
+1. **Selection Sort**. Write a function called selSort(values []int) that will sort a slice **a** of integers , using the selection sort algorithm described above, and **return a sorted slice**.
 	
-2. **Bubble Sort**. Write a function called bubSort(a []int) that will sort a slice **a** of integers , using the bubble sort algorithm described above, and **return a sorted slice**.
+2. **Bubble Sort**. Write a function called bubSort(values []int) that will sort a slice **a** of integers , using the bubble sort algorithm described above, and **return a sorted slice**.
 	
-3. **Shuffle** _(Demo in Class)_:  We now want to take a **sorted slice** and shuffle it so that the values are in a somewhat random order.  Design an algorithm that would allow you to shuffle a slice.  Write a function called shuffle(a []int) that will implement your algorithm, **returning a shuffled slice**. 
+3. **Shuffle** _(Demo in Class)_:  We now want to take a **sorted slice** and shuffle it so that the values are in a somewhat random order.  Design an algorithm that would allow you to shuffle a slice.  Write a function called shuffle(values []int) that will implement your algorithm, **returning a shuffled slice**. 
