@@ -8,6 +8,9 @@ func main() {
 
 	numberSlice = append(numberSlice, 99)
 
+	// Calculating the Average
+	fmt.Printf("Average: %0.2f\n", average(numberSlice))
+
 	// Working with Slices
 	fmt.Println("Doubling a Slice")
 	fmt.Println(numberSlice)
