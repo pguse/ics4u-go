@@ -147,12 +147,12 @@ that you probably expect because arrays are **copied by value**.  A copy of an a
 You can create a copy of a slice that has **no connection** with the original.  To do this, you must use the **copy** function.  For example,
 
 ```go
-a := []int{2, 4, 6, 8}
-b := make([]int, 4)
-copy(b, a)
-b[2] = 10
-fmt.Println(a)
-fmt.Println(b)
+    a := []int{2, 4, 6, 8}
+	b := make([]int, 4)
+	copy(b, a)
+	b[2] = 10
+	fmt.Println(a)
+	fmt.Println(b)
 ```
 
 produces the output
