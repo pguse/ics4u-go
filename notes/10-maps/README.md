@@ -22,3 +22,12 @@ capital := map[string]string{
 	}
 }
 ```
+
+
+Here a new map has been created using a **map literal**, where the map is populated with a set of **key/value** pairs.
+
+A new map can also be created using the built-in function **make**,
+
+```go
+ages := make(map[string]int) // mapping from strings to ints
+```
