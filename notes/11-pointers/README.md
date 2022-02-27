@@ -39,7 +39,17 @@ outputs, on my machine,
 0xc0000aa058
 ```
 
-If you run this on your machine, the memory address will be different. Notice the use of the **&** character in front of the variable **a**.
+If you run this on your machine or I run it another time on my machine, the memory address will be different. Notice the use of the **&** character in front of the variable **a**.  The symbol **&a** is a pointer to the variable **a** of type **\*int**.  Notice that the code,
+
+```go
+fmt.Printf("%T", &a)
+```
+
+outputs the type
+
+```
+*int
+```
 
 ## Pointer Variables
 

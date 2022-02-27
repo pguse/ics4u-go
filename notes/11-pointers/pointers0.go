@@ -7,5 +7,6 @@ func main() {
 
 	fmt.Println(a)
 	fmt.Printf("%T\n", a)
-	fmt.Printf("%p", &a)
+	fmt.Printf("%p\n", &a)
+	fmt.Printf("%T", &a)
 }
