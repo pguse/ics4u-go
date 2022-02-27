@@ -105,6 +105,7 @@ func main() {
 
 	value := 3
 
+	fmt.Println(value)
 	addTwoPointer(&value)
 	fmt.Printf("value: %v\n", value)
 }
@@ -113,3 +114,33 @@ func addTwoPointer(n *int) {
 	*n += 2
 }
 ```
+
+In this case, notice that there is no **return** value for the function.  It is unnecessary because by passing a pointer to the original variable into the function, the value at that address is being modified directly.  So, the variable **value** is being directly affected by the actions of the function **addTwoPointer**.  You can see this by looking at the output.
+
+```
+3
+value: 5
+```
+
+## Pointers - Array Storage
+
+By using pointers, you can see that when the elements of an **array** are stored in memory _(RAM)_, they are stored in blocks of memory that are **side by side**.  The following code demonstrates this.
+
+```go
+n := [5]int{2, 4, 8, 16, 32}
+
+// array elements are stored in adjacent memory addresses
+fmt.Printf("%p, %p, %p, %p, %p\n", &n[0], &n[1], &n[2], &n[3], &n[4])
+
+// note: each int takes up 64 bits or 8 bytes of memory (RAM)
+fmt.Println(bits.UintSize)
+```
+
+In Go the **int** data type uses **64 bits or 8Mb of memory** to store each integer value.  You can see this by looking at the output of this code.
+
+```
+0xc00000a3c0, 0xc00000a3c8, 0xc00000a3d0, 0xc00000a3d8, 0xc00000a3e0
+64
+```
+
+**Note:**  Of course, the memory addresses will be different each time the program is run. 
