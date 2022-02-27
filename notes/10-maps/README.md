@@ -32,7 +32,7 @@ for k := range capital {
 	}
 ```
 
-Running this code could produce the following output
+This could produce the following output
 
 ```
 The capital of Prince Edward Islan is Charlottetown.
