@@ -99,7 +99,7 @@ In order to output a **map** in order, you can use a **slice** to hold the **key
 namesSlice := make([]string, 0, len(marks))
 ```
 
-creates a **slice** of strings with a **length** of 0 and a capacity equal to the length of the marks map **len(marks)**.  Now the **keys** must be appended to the empty slice,
+creates a **slice** of strings with a **length** of 0 and a capacity equal to the length of the marks map - **len(marks)**.  Now the **keys** must be appended to the empty slice,
 
 ```go
 for k := range marks {
