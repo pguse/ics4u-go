@@ -43,7 +43,7 @@ If you run this on your machine, the memory address will be different. Notice th
 
 ## Pointer Variables
 
-A pointer is a variable that stores the value of a memory address in RAM.  To declare a pointer, you can do the following,
+A pointer stores the **memory address** in RAM of a variable.  To declare a pointer, you can do the following,
 
 ```go
 var c *int
