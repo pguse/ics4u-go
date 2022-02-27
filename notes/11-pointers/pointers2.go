@@ -8,7 +8,6 @@ func main() {
 
 	fmt.Println(addTwo(value))
 	fmt.Printf("value: %v\n", value)
-
 	addTwoPointer(&value)
 	fmt.Printf("value: %v\n", value)
 }
