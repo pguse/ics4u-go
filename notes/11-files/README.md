@@ -2,7 +2,7 @@
 
 ## Reading an entire File into Memory
 
-Here is an example of code that will read an entire text file **emma.txt** into memory.
+Here is an example of code that will read an entire text file **test.txt** into memory.
 
 ```go
 import (
