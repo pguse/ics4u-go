@@ -80,7 +80,7 @@ produces the output
 Hello!
 ```
 
-Imagine that we add a character, such as an emoji to our string.  The following code, using a standard for-loop,
+Imagine that we add a character, such as an **emoji** to our string.  The following code, using a standard for-loop,
 
 ```go
 text := "Hello 🐱!"
