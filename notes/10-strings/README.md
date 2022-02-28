@@ -106,7 +106,7 @@ produces the output
 10 33
 ```
 
-If you look carefully at the string "Hello 🐱!", there are only **8 characters**, yet there are 11 code-points in the output.  The emoji is actually stored using **4 bytes** of memory and uses 4 code-points to store it instead of one.  Attempting to output each character using the standard for-loop as
+If you look carefully at the string "Hello 🐱!", there are only **8 characters**, yet there are 11 code-points in the output.  The **emoji** is actually stored using **4 bytes** of memory and uses 4 code-points to store it instead of one.  Attempting to output each character using the standard for-loop as
 
 ```go
 for i := 0; i < len(text); i++ {
@@ -114,7 +114,7 @@ for i := 0; i < len(text); i++ {
 }
 ```
 
-produces and output as follows and causes the program to hang.
+produces an output as follows and causes the program to hang.
 
 ```
 0 H
@@ -148,7 +148,7 @@ produces the correct output
 10 !
 ```
 
-See how the **emoji** uses indices 6-9.  For indices corresponds to **4 bytes** of information.
+See how the **emoji** uses indices 6-9.  The 4 indices corresponds to **4 bytes** of information.
 
 Again, without using the index values, the code
 
@@ -165,5 +165,3 @@ Hello 🐱!
 ```
 
 This note does not just apply to **emojis** within **strings**.  Similar effects occur when you use characters in languages that are not part of the English alphabet.
-
-
