@@ -148,7 +148,7 @@ produces the correct output
 10 !
 ```
 
-See how the **emoji** uses indices 6-9.  The 4 indices corresponds to **4 bytes** of information.
+See how the **emoji** uses indices 6-9.  The 4 indices correspond to **4 bytes** of information.
 
 Again, without using the index values, the code
 
