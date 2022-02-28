@@ -70,7 +70,7 @@ Notice that the variable **i** stores the index while **ch** stores the **Unicod
 
 ```go
 for _, ch := range text {
-		fmt.Printf("%c", ch)
+	fmt.Printf("%c", ch)
 }
 ```
 
