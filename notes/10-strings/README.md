@@ -17,7 +17,7 @@ produces the output
 string
 ```
 
-You can use the **for-loop** we've being using to loop across a **string**.  For example,
+You can use the **for-loop** we've been using to loop across a **string**.  For example,
 
 ```go
 for i := 0; i < len(text); i++ {
