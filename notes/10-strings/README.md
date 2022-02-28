@@ -164,4 +164,7 @@ produces the output
 Hello 🐱!
 ```
 
-This note does not just apply to **emojis** within **strings**.  Similar effects occur when you use characters in languages that are not part of the English alphabet.
+It is best practice to use the **for-range** loop when looping across strings.
+
+
+This note does not just apply to **emojis** within **strings**.  Similar effects occur when you use languages with characters that are not part of the English alphabet.
