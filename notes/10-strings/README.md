@@ -50,9 +50,9 @@ Hello World!
 The Go language has a more convenient version of the for-loop that uses the **range** keyword.  It has a simpler form and doesn't require the use of an **index** or the **length** of the string. For example,
 
 ```go
-	for i, ch := range text {
-		fmt.Println(i, ch)
-	}
+for i, ch := range text {
+    fmt.Println(i, ch)
+}
 ```
 
 produces the output
