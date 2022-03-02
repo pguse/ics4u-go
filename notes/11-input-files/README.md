@@ -1,5 +1,38 @@
 # Working with Files
 
+## Reading Input from the User
+
+The **Scanf** function scans text read from **standard input**, storing successive space-separated values into successive arguments as **determined by the format**. _It returns the number of items successfully scanned._  You can read a single value as follows,
+
+```go
+var name string
+
+fmt.Print("Enter your name: ")
+fmt.Scanf("%s", &name)
+fmt.Printf("Hello %s!", name)
+```
+
+Notice:  The **Print** function is used instead of **Println** because we want the input to occur on the same line as the prompt.  The **Scanf** function requires the **address** of the variable **name** _(a pointer to **name**)_.  However, the input is stored in the variable **name**.  You can also use **Scanf** to read in multiple values separated by spaces, as determined by the format provided.  For example,
+
+```go
+var name string
+var age int
+
+fmt.Print("Enter your name and age: ")
+fmt.Scanf("%s  %d", &name, &age)
+fmt.Printf("Hello %s!\n", name)
+fmt.Printf("Your are %d years old.", age)
+```
+
+produces the following output
+
+```
+Enter your name and age: Paul 51
+Hello Paul!
+Your are 51 years old.
+```
+
+
 ## Reading an entire File into Memory
 
 Here is an example of code that will read an entire text file **test.txt** into memory. Note:  The text file **test.txt** must be in the same folder as your Go program.
