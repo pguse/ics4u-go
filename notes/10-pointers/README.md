@@ -205,3 +205,17 @@ produces the output
 1011
 1a9
 ```
+
+In **Go** the leading characters **0b** represent a binary value while **0x** represent a hexadecimal value, so
+
+```go
+fmt.Printf("%d\n", 0b1011)
+fmt.Printf("%d", 0x1a9)
+```
+
+produces the output
+
+```
+11
+425
+```
