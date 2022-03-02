@@ -12,7 +12,7 @@ fmt.Scanf("%s", &name)
 fmt.Printf("Hello %s!", name)
 ```
 
-produces the following output
+producing the following output
 
 ```
 Enter your name: Paul
