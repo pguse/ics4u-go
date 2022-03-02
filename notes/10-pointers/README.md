@@ -159,7 +159,7 @@ In Go the **int** data type uses **64 bits or 8Mb of memory** to store each inte
 
 
 | 0xc000000000 | 0xc000000001 | 0xc000000002 | 0xc000000003 | 0xc000000004 | 0xc000000005 | 0xc000000006 | 0xc000000007 |
-| :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
+| :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
 | 00000001     | 00000010     | 00000011     | 00000100     | 00000110     | 00000111     | 00001000     | 00001001     |
 
 Memory addresses are represented in base-16 hexadecimal format, starting with 0x.  Each address stores 1 byte of information or 8 bits.  In Go, on a computer with a 64-bit processor, **integers** are stored using **64 bits** of memory.  In other words, 8 memory addresses _(8 bits each)_ are used to store each **int** value.
