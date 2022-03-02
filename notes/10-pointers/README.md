@@ -191,3 +191,17 @@ Hexadecimal values are constructed, with **digits 0-9** and **characters a-f**, 
 |  0   |  1  |  a  |  9  |
 
 represents the value **0**x4096 + **1**x256 + **10**x16 + **9**x1 = **425** in base-10.
+
+In **Go**, you can use the **Printf** function to output values in different formats.  For example,
+
+```go
+fmt.Printf("%b\n", 11)
+fmt.Printf("%x", 425)
+```
+
+produces the output
+
+```
+1011
+1a9
+```

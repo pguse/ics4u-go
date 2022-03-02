@@ -38,6 +38,7 @@ Here are a few format specifiers:
 | %c	           | the character represented by the corresponding Unicode code point |
 | %p               | base 16 notation, with leading 0x  - memory address in RAM        |
 | %b               | base 2 value                                                      |
+| %x               | base 16, with lower-case letters for a-f                          |
 | %%               | a literal percent sign                                            |
 
 
