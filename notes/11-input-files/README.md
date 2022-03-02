@@ -12,6 +12,13 @@ fmt.Scanf("%s", &name)
 fmt.Printf("Hello %s!", name)
 ```
 
+produces the following output
+
+```
+Enter your name: Paul
+Hello Paul!
+```
+
 Notice:  The **Print** function is used instead of **Println** because we want the input to occur on the same line as the prompt.  The **Scanf** function requires the **address** of the variable **name** _(a pointer to **name**)_.  However, the input is stored in the variable **name**.  You can also use **Scanf** to read in multiple values separated by spaces, as determined by the format provided.  For example,
 
 ```go
