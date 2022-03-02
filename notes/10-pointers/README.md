@@ -2,7 +2,7 @@
 
 ## Variables
 
-Variables in Go have four properties:  a name, a type, a value, and a memory address _(where the value is stored)_.  You can access the **value** as follows,
+Variables in Go have four properties:  a name, a type, a value, and a memory address _(where the value is stored in RAM)_.  You can access the **value** as follows,
 
 ```go
 a := 52
@@ -153,4 +153,13 @@ In Go the **int** data type uses **64 bits or 8Mb of memory** to store each inte
 64
 ```
 
-**Note:**  Of course, the memory addresses will be different each time the program is run. 
+**Note:**  Of course, the memory addresses will be different each time the program is run.
+
+## Memory Addresses
+
+
+| 0xc000000000 | 0xc000000001 | 0xc000000002 | 0xc000000003 | 0xc000000004 | 0xc000000005 | 
+| :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
+| 00000001     | 00000010     | 00000011     | 00000100     | 00000110     | 00000111     |
+
+Memory addresses are represented in base-16 hexadecimal format, starting with 0x.  Each address stores 1 byte of information or 8 bits.

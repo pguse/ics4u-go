@@ -27,11 +27,18 @@ The **Printf** function uses a format specifier that describes how to format the
 
 Here are a few format specifiers:
 
-| Format Specifier | Description                                      |
-| :--------------: |:------------------------------------------------:|
-| %v               | the value in a default format                    |
-| %d               | an integer in base 10                            |
-| %f               | decimal point but no exponent, e.g. 123.456      |
-| %s               | the uninterpreted bytes of the string or slice   |
+| Format Specifier | Description                                                       |
+| :--------------: |:-----------------------------------------------------------------:|
+| %v               | the value in a default format                                     |
+| %d               | an integer in base 10                                             |
+| %f               | decimal point but no exponent, e.g. 123.456                       |
+| %s               | the uninterpreted bytes of the string or slice                    |
+| %t               | true or false Boolean value                                       |
+| %T               | the type of the value                                             |
+| %c	           | the character represented by the corresponding Unicode code point |
+| %p               | base 16 notation, with leading 0x  - memory address in RAM        |
+| %b               | base 2 value                                                      |
+| %%               | a literal percent sign                                            |
+
 
 Note:  **Printf** does not automatically append a newline to its output.  If you want a newline, you must use **\n** _(called an escape sequence)_ within your string literal.  Notice that if you want to include a **%** in your output it must be typed as **%%**, because of the use of **%** in the the format specifiers.
