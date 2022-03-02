@@ -192,7 +192,7 @@ Hexadecimal values are constructed, with **digits 0-9** and **characters a-f**, 
 
 represents the value **0**x4096 + **1**x256 + **10**x16 + **9**x1 = **425** in base-10.
 
-In **Go**, you can use the **Printf** function to output values in different formats.  For example,
+In **Go**, you can use the **Printf** function to output values in different formats.  For example, you can use the **format verbs**:  **%b** for binary, and **%x** for hexadecimal values.
 
 ```go
 fmt.Printf("%b\n", 11)
