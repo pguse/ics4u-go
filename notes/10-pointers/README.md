@@ -158,8 +158,36 @@ In Go the **int** data type uses **64 bits or 8Mb of memory** to store each inte
 ## Memory Addresses
 
 
-| 0xc000000000 | 0xc000000001 | 0xc000000002 | 0xc000000003 | 0xc000000004 | 0xc000000005 | 
+| 0xc000000000 | 0xc000000001 | 0xc000000002 | 0xc000000003 | 0xc000000004 | 0xc000000005 | 0xc000000006 | 0xc000000007 |
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
-| 00000001     | 00000010     | 00000011     | 00000100     | 00000110     | 00000111     |
+| 00000001     | 00000010     | 00000011     | 00000100     | 00000110     | 00000111     | 00001000     | 00001001     |
 
-Memory addresses are represented in base-16 hexadecimal format, starting with 0x.  Each address stores 1 byte of information or 8 bits.
+Memory addresses are represented in base-16 hexadecimal format, starting with 0x.  Each address stores 1 byte of information or 8 bits.  In Go, on a computer with a 64-bit processor, **integers** are stored using **64 bits** of memory.  In other words, 8 memory addresses _(8 bits each)_ are used to store each **int** value.
+
+## Binary Numbers
+
+We are accustomed to working with base-10 numbers.  These values are constructed, with **digits 0-9**, using place values that are **powers of 10**.  For example,
+
+| 1000 | 100 | 10  | 1   |
+| :--: | :-: | :-: | :-: |
+|  4   |  3  |  1  |  5  |
+
+shows that the value **4315** is really **4**x1000 + **3**x100 + **1**x10 + **5**x1.
+
+Binary values are constructed, with **digits 0 and 1**, using place values that are **powers of 2**.  For example, the binary number **1011**
+
+| 8    | 4   | 2   | 1   |
+| :--: | :-: | :-: | :-: |
+|  1   |  0  |  1  |  1  |
+
+represents the value **1**x8 + **0**x4 + **1**x2 + **1**x1 = **11** in base-10.
+
+## Hexadecimal Numbers
+
+Hexadecimal values are constructed, with **digits 0-9** and **characters a-f**, using place values that are **powers of 16**.  Note:  The characters **a-f** represent the base-10 values **10-15**.  For example, the hexadecimal number _(starting with 0x)_ **0x01a9**
+
+| 4096 | 256 | 16   | 1  |
+| :--: | :-: | :-: | :-: |
+|  0   |  1  |  a  |  9  |
+
+represents the value **0**x4096 + **1**x256 + **10**x16 + **9**x1 = **425** in base-10.
