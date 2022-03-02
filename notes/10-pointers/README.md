@@ -146,7 +146,7 @@ fmt.Printf("%p, %p, %p, %p, %p\n", &n[0], &n[1], &n[2], &n[3], &n[4])
 fmt.Println(bits.UintSize)
 ```
 
-In Go the **int** data type uses **64 bits or 8Mb of memory** to store each integer value.  You can see this by looking at the output of this code.
+In Go the **int** data type uses **64 bits or 8 bytes of memory** to store each integer value.  You can see this by looking at the output of this code.  Each **int** element of the array uses 8 memory addresses to store it _(8 x 8 bits = 64 bits)_.
 
 ```
 0xc00000a3c0, 0xc00000a3c8, 0xc00000a3d0, 0xc00000a3d8, 0xc00000a3e0
