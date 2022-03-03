@@ -27,7 +27,7 @@ This outputs
 int
 ```
 
-To access the memory address, the following code
+To access the start of the memory address that holds the integer value **a**, the following code
 
 ```go
 fmt.Printf("%p", &a)
