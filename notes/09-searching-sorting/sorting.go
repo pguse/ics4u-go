@@ -34,15 +34,15 @@ func bubSort(values []int) []int {
 
 // Shuffles an int slice
 func shuffle(values []int) []int {
-	m := make([]int, len(values))
-	copy(m, values)
-	for i := range m {
+	v := make([]int, len(values))
+	copy(v, values)
+	for i := range v {
 		rand.Seed(time.Now().Unix())
-		n := rand.Intn(len(m))
-		swap := m[i]
-		m[i] = m[n]
-		m[n] = swap
+		n := rand.Intn(len(v))
+		swap := v[i]
+		v[i] = v[n]
+		v[n] = swap
 	}
 
-	return m
+	return v
 }
