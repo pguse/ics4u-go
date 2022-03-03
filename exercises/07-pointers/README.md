@@ -10,7 +10,7 @@ Complete the following exercises.  Starter code is found in the **exercises.go**
 
 Write a function called **toCelsius(fahrenheit \*float64) \*float64** that takes a **pointer** to a temperature value in **fahrenheit** as a parameter.  It should return a **pointer** to the equivalent temperature value in **celsius**.  The conversion equation is:
 
-$ C = \frac{5}{9}(F-32) $
+<img src="https://render.githubusercontent.com/render/math?math=C = \frac{5}{9}(F-32)} = -1">
 
 ## 1 - Divisors
 
