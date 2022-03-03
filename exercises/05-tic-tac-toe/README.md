@@ -41,9 +41,9 @@ func isTie(b [9]string) bool {
 
 ## Tasks
 
-### 1 - Is there a Win?
+### 05-0:  Is there a Win?
 
 Complete the **isWin** function. It should return **true** if there is a win on the board.  Otherwise, it should return **false**. Remember, there are 8 possible ways to win in the tic-tac-toe game:  3 of the same kind _('X' or 'O')_ in any row _(3)_, any column _(3)_, or either diagonal _(2)_.
 
-### 2 - Is there a Tie?
+### 05-1:  Is there a Tie?
 Complete the **isTie** function. It should return **true** if there is a tie on the board.  Otherwise, it should return **false**.  A **tie** occurs if the board is filled, with 'X's and 'O's but there is **no win**.

@@ -6,19 +6,19 @@ In Visual Studio Code, create a folder called **Functions** and then open it. No
 
 Create the following functions and implement / use them in the **main** function.
 
-## 04-1: Slope
+## 04-0: Slope
 Write a function called **slope(x1, y1, x2, y2 float64) float64** that calculates and **returns** a **float64** value representing the slope of a line passing through the points (x1,y1) and (x2,y2).  Notice:  Since all the input parameters provided to the function are of the **same type**, we need only provide a single type declaration **float64** at the end of the list
 
-## 04-2: Hypotenuse
+## 04-1: Hypotenuse
 Write a function called **hypotenuse(a, b float64) float64** that calculates and **returns** a **float64** value representing the hypotenuse of a right triangle with sides a and b.
 
-## 04-3: Distance
+## 04-2: Distance
 Write a function called **distance(x1, y1, x2, y2 float64) float64** that calculates and **returns** a **float64** representing the distance between the points (x1,y1) and (x2,y2).
 
-## 04-4: Prime
+## 04-3: Prime
 Write a function called **isPrime(num int) bool** that determines whether an integer **num** is prime and **returns** a **bool** value ... either **true** or **false** . 
 
-## 04-5: Greatest Common Divisor
+## 04-4: Greatest Common Divisor
 Write a function called **gcd(m, n int) int** that **returns** an **int** representing the greatest common divisor of the numbers m and n, assuming m > n. The best-known algorithm for finding a greatest common divisor is Euclid’s Algorithm. Euclid’s Algorithm states that the greatest common divisor of two integers m and n is 
 
 * n if n divides into m completely.
