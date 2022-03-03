@@ -132,7 +132,7 @@ In this case, notice that there is no **return** value for the function.  It is 
 value: 5
 ```
 
-I **do not recommend** creating functions like this, in most cases.  Instead of **dereferencing** a pointer _(e.g. *n)_ , to change the value of a variable outside the function, just use a **return** statement to return a copy, as in the first example.
+I **do not recommend** creating functions like **addTwoPointer**, in most cases.  Instead of **dereferencing** a pointer _(e.g. *n)_ , to change the value of a variable outside the function, just use a **return** statement to return a copy, as in the first example.
 
 ## Pointers - Array Storage
 
