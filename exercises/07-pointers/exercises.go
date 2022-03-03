@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	temp := 27.0
+	temp := 72.0
 	number := 18
 
-	fmt.Printf("%f = %f\n", temp, *toCelsius(&temp))
+	fmt.Printf("%0.1f C = %0.1f F\n", temp, *toCelsius(&temp))
 	fmt.Printf("Divisors of %d: %v", number, *divisors(&number))
 }
 
