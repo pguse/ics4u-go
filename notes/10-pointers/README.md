@@ -2,10 +2,10 @@
 
 ## Variables
 
-Variables in Go have four properties:  a name, a type, a value, and a memory address _(where the value is stored in RAM)_.  You can access the **value** as follows,
+Variables in Go have four properties:  a name, a type, a value, and a memory address _(where the value is stored in RAM)_.  When you declare a variable - telling the compiler what type it is and what it is called - the declaration enables the compiler to set aside a block of memory to store the variable.  For every variable you declare, the compiler remembers which block of memory is used to store the variable.  You can access the **value** of the variable as follows,
 
 ```go
-a := 52
+var a int = 52
 fmt.Println(a)
 ```
 
