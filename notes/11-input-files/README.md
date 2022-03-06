@@ -63,7 +63,7 @@ Hello Paul!
 Your are 51 years old.
 ```
 
-The **Scanln** function stops scanning at a newline, so you can also use if for input on separate lines.  For example,
+The **Scanln** function stops scanning at a newline, so you can also use it for input on separate lines.  For example,
 
 ```go
 var name string
