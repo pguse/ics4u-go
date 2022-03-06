@@ -43,15 +43,15 @@ If you wish to have user input on **different lines**, you must include the newl
 
 ```go
 var name string
-	var age int
+var age int
 
-	fmt.Print("Enter your name: ")
-	fmt.Scanf("%s\n", &name)
-	fmt.Print("Enter your age: ")
-	fmt.Scanf("%d", &age)
+fmt.Print("Enter your name: ")
+fmt.Scanf("%s\n", &name)
+fmt.Print("Enter your age: ")
+fmt.Scanf("%d", &age)
 
-	fmt.Printf("Hello %s!\n", name)
-	fmt.Printf("Your are %d years old.", age)
+fmt.Printf("Hello %s!\n", name)
+fmt.Printf("Your are %d years old.", age)
 ```
 
 produces the output,
