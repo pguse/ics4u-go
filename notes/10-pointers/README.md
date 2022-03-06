@@ -27,7 +27,7 @@ This outputs
 int
 ```
 
-To access the memory address, the following code
+To access the start of the memory address that holds the integer value **a**, the following code
 
 ```go
 fmt.Printf("%p", &a)
@@ -132,6 +132,8 @@ In this case, notice that there is no **return** value for the function.  It is 
 value: 5
 ```
 
+I **do not recommend** creating functions like **addTwoPointer**, in most cases.  Instead of **dereferencing** a pointer _(e.g. *n)_ , to change the value of a variable outside the function, just use a **return** statement to return a copy, as in the **addTwo** function.
+
 ## Pointers - Array Storage
 
 By using pointers, you can see that when the elements of an **array** are stored in memory _(RAM)_, they are stored in blocks of memory that are **side by side**.  The following code demonstrates this.
@@ -158,7 +160,7 @@ In Go the **int** data type uses **64 bits or 8 bytes of memory** to store each 
 ## Memory Addresses
 
 
-| 0xc000000000 | 0xc000000001 | 0xc000000002 | 0xc000000003 | 0xc000000004 | 0xc000000005 | 0xc000000006 | 0xc000000007 |
+| 0x00000000 | 0x00000001 | 0x00000002 | 0x00000003 | 0x00000004 | 0x00000005 | 0x00000006 | 0x00000007 |
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: |
 | 00000001     | 00000010     | 00000011     | 00000100     | 00000110     | 00000111     | 00001000     | 00001001     |
 
