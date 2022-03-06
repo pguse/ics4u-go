@@ -129,7 +129,7 @@ func main() {
 		fmt.Println("File reading error", err)
 		return
 	}
-	fmt.Printf("%s", string(data))
+	fmt.Printf("%s", data)
 }
 ```
 
@@ -143,7 +143,7 @@ the lazy dog
 
 Notice that the **ReadFile** function returns two values:  **data** - the contents of the file, and **err** - whether an error is created in trying to read the file.  If the file is found and read, then the value of **err** should be **nil**, and this is handled by the **if-statement** that follows.
 
-Notice also that when **data** is output, it is first converted to a **string**.  The following statement,
+Notice also that when **data** is output, the **%s** in the format string allows **data** to be output as a **string**.  The following statement,
 
 ```go
 fmt.Println(data)
