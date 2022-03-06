@@ -39,6 +39,79 @@ Hello Paul!
 Your are 51 years old.
 ```
 
+If you wish to have user input on **different lines**, you must include the newline character **\n** within the format string of **Scanf**.  For example,
+
+```go
+var name string
+	var age int
+
+	fmt.Print("Enter your name: ")
+	fmt.Scanf("%s\n", &name)
+	fmt.Print("Enter your age: ")
+	fmt.Scanf("%d", &age)
+
+	fmt.Printf("Hello %s!\n", name)
+	fmt.Printf("Your are %d years old.", age)
+```
+
+produces the output,
+
+```
+Enter your name: Paul
+Enter your age: 51
+Hello Paul!
+Your are 51 years old.
+```
+
+The **Scanln** function stops scanning at a newline, so you can also use if for input on separate lines.  For example,
+
+```go
+var name string
+var age int
+
+fmt.Print("Enter your name: ")
+fmt.Scanln(&name)
+fmt.Print("Enter your age: ")
+fmt.Scanln(&age)
+
+fmt.Printf("Hello %s!\n", name)
+fmt.Printf("Your are %d years old.", age)
+```
+
+produces the output
+
+```
+Enter your name: Paul
+Enter your age: 51
+Hello Paul!
+Your are 51 years old.
+```
+
+You can also use **Scanln** to scan multiple values, separated by spaces, on a single line.  Remember, scanning will stop once a **newline** is created.  For example,
+
+```go
+var first string
+var last string
+var age int
+
+fmt.Print("Enter your name: ")
+fmt.Scanln(&first, &last)
+fmt.Print("Enter your age: ")
+fmt.Scanln(&age)
+
+fmt.Printf("Hello %s %s!\n", first, last)
+fmt.Printf("Your are %d years old.", age)
+```
+
+produces the output
+
+```
+Enter your name: Paul Guse
+Enter your age: 51
+Hello Paul Guse!
+Your are 51 years old.
+```
+
 
 ## Reading an entire File into Memory
 
