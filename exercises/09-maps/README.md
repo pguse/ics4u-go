@@ -14,7 +14,4 @@ The genetic language of every living thing on the planet is DNA. DNA is a large 
 
 Given a single stranded DNA string, compute how many times each nucleotide occurs in the string.
 
-In the starter code, **dna.go**, modify the function called **numberNucleotides(strand string) map[rune]int** that returns a map with keys that are the nucleotides:  **'A'**, **'C'**, **'G'**, and **'T'** and values that represent **how many times each nucleotide occurs** in a string called **strand**.  Test your function on the given string **dna**."
-
-dna = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
-
+In the starter code, **dna.go**, modify the function called **numberNucleotides(strand string) map[rune]int** that returns a map with keys that are the nucleotides:  **'A'**, **'C'**, **'G'**, and **'T'** and values that represent **how many times each nucleotide occurs** in a string called **strand**.
