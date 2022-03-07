@@ -129,7 +129,7 @@ bob        90
 charlie    75
 ```
 
-# Using a Map as a Counter
+## Using a Map as a Counter
 
 You can use a **map** to keep track of the number of occurrences of some type of data.  For example, if we wanted to count the number of emojis in the following string
 
