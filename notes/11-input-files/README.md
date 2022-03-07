@@ -83,3 +83,7 @@ produces the output,
 ```
 
 because the contents **data** of the file are initially stored as a slice of **bytes** _(uint8 values)_, which represent the **Unicode code-points** of each character.
+
+## Storing each Line of a File
+
+The **strings** package contains a function called **Split** that can split a string efficiently.

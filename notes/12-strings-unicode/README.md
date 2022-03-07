@@ -1,8 +1,8 @@
 # Strings
 
-Individual letters, digits, and symbols are called **characters**.  When you _string_ togther characters and place them between quotes, it's called a _literal string_.
+Individual letters, digits, and symbols are called **characters**.  When you _string_ togther characters and place them between quotes, it's called a _literal string_.  In Go, these characters are called **runes**.
 
-Literal values wrapped in quotes are inferred to be of type **string**.  For example,
+Literal values wrapped in quotes are inferred to be of type **string**.  So, a **string** is a collection of **runes**.  For example,
 
 
 ```go

@@ -13,4 +13,4 @@ Modify the starter code called **markEntry.go** that
 
 ## 08-1: Number of Vowels
 
-Modify the starter code called **numberVowels.go** that counts the **number of vowels** found in a text file called **emma.txt** .  You will need to save the text file **emma.txt** in the same folder as **numberVowels.go**
+Modify the starter code called **numberVowels.go** so that it counts the **number of vowels** found in a text file called **emma.txt** .  You will need to save the text file **emma.txt** in the same folder as **numberVowels.go**
