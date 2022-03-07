@@ -39,6 +39,79 @@ Hello Paul!
 Your are 51 years old.
 ```
 
+If you wish to have user input on **different lines**, you must include the newline character **\n** within the format string of **Scanf**.  For example,
+
+```go
+var name string
+var age int
+
+fmt.Print("Enter your name: ")
+fmt.Scanf("%s\n", &name)
+fmt.Print("Enter your age: ")
+fmt.Scanf("%d", &age)
+
+fmt.Printf("Hello %s!\n", name)
+fmt.Printf("Your are %d years old.", age)
+```
+
+produces the output,
+
+```
+Enter your name: Paul
+Enter your age: 51
+Hello Paul!
+Your are 51 years old.
+```
+
+The **Scanln** function stops scanning at a newline, so you can also use it for input on separate lines.  For example,
+
+```go
+var name string
+var age int
+
+fmt.Print("Enter your name: ")
+fmt.Scanln(&name)
+fmt.Print("Enter your age: ")
+fmt.Scanln(&age)
+
+fmt.Printf("Hello %s!\n", name)
+fmt.Printf("Your are %d years old.", age)
+```
+
+produces the output
+
+```
+Enter your name: Paul
+Enter your age: 51
+Hello Paul!
+Your are 51 years old.
+```
+
+You can also use **Scanln** to scan multiple values, separated by spaces, on a single line.  Remember, scanning will stop once a **newline** is created.  For example,
+
+```go
+var first string
+var last string
+var age int
+
+fmt.Print("Enter your name: ")
+fmt.Scanln(&first, &last)
+fmt.Print("Enter your age: ")
+fmt.Scanln(&age)
+
+fmt.Printf("Hello %s %s!\n", first, last)
+fmt.Printf("Your are %d years old.", age)
+```
+
+produces the output
+
+```
+Enter your name: Paul Guse
+Enter your age: 51
+Hello Paul Guse!
+Your are 51 years old.
+```
+
 
 ## Reading an entire File into Memory
 
@@ -56,7 +129,7 @@ func main() {
 		fmt.Println("File reading error", err)
 		return
 	}
-	fmt.Printf("%s", string(data))
+	fmt.Printf("%s", data)
 }
 ```
 
@@ -70,7 +143,7 @@ the lazy dog
 
 Notice that the **ReadFile** function returns two values:  **data** - the contents of the file, and **err** - whether an error is created in trying to read the file.  If the file is found and read, then the value of **err** should be **nil**, and this is handled by the **if-statement** that follows.
 
-Notice also that when **data** is output, it is first converted to a **string**.  The following statement,
+Notice also that when **data** is output, the **%s** in the format string allows **data** to be output as a **string**.  The following statement,
 
 ```go
 fmt.Println(data)

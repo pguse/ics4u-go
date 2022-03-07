@@ -45,6 +45,8 @@ to get the output
 Hello World!
 ```
 
+The **%c** in the format string converts the **code-points** to their corresponding characters.
+
 ## The for-range loop - Multilingual text
 
 The Go language has a more convenient version of the for-loop that uses the **range** keyword.  It has a simpler form and doesn't require the use of an **index** or the **length** of the string. For example,
@@ -80,7 +82,7 @@ produces the output
 Hello!
 ```
 
-Imagine that we add a character, such as an **emoji** to our string.  The following code, using a standard for-loop,
+Again, the use of the **%c** in the format string, converts the **code-points** to their corresponding characters.  Imagine that we add a character, such as an **emoji** to our string.  The following code, using a standard for-loop,
 
 ```go
 text := "Hello 🐱!"
