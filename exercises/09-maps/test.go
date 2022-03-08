@@ -17,9 +17,11 @@ func main() {
 	//
 	vowels := make(map[byte]int)
 	for _, ch := range data {
-		if ch == 'a' {
+		if ch == 'a' || ch == 'e' {
 			vowels[ch] += 1
 		}
 	}
-	fmt.Printf("Number of a's: %d", vowels['a'])
+
+	fmt.Printf("Number of a's: %d\n", vowels['a'])
+	fmt.Printf("Number of e's: %d", vowels['e'])
 }
