@@ -32,7 +32,7 @@ _(the order of fields is irrelevant when using this syntax)_. Note:  This allows
 To access individual fields of a **struct** you have to use dot (.) operator.  For example,
 
 ```go
-	fmt.Printf("Point #1: (%0.1f, %0.1f)\n", p1.x, p1.y)
+fmt.Printf("Point #1: (%0.1f, %0.1f)\n", p1.x, p1.y)
 ```
 
 produces the output,
@@ -52,7 +52,7 @@ func midpoint(p1, p2 Point) Point {
 takes two parameters of type **Point** and returns a value of type **Point**.  The following code,
 
 ```go
-	fmt.Printf("Midpoint: %v\n", midpoint(p1, p2))
+fmt.Printf("Midpoint: %v\n", midpoint(p1, p2))
 ```
 
 produces the output,
