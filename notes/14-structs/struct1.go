@@ -13,7 +13,9 @@ type Point struct {
 func main() {
 
 	p1 := Point{4, 5}
-	p2 := Point{7, 9}
+	p2 := Point{x: 7, y: 9}
+
+	fmt.Printf("Point #1: (%0.1f, %0.1f)\n", p1.x, p1.y)
 
 	fmt.Printf("Points: %v %v\n", p1, p2)
 	fmt.Printf("Midpoint: %v\n", midpoint(p1, p2))
