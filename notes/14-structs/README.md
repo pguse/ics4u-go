@@ -4,7 +4,7 @@ At this point we have used functions to organize code and built-in types to orga
 
 ## Composite Types
 
-We are going to build a **composite type** that describes a point in 2-dimensional space. In Go, a programmer described composite type is called a **struct**.  A struct is made up of **fields** that may contain different types.  A **struct** definition for a **point** would look like this"
+We are going to build a **composite type** that describes a point in 2-dimensional space. In Go, a programmer described composite type is called a **struct**.  A struct is made up of **fields** that may contain different types.  A **struct** definition for a **point** would look like this
 
 ```go
 type Point struct {
