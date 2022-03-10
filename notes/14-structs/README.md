@@ -19,7 +19,7 @@ You can initialize a variable of a struct type using a **struct literal** as fol
 p1 := Point{4, 5}
 ```
 
-When using a **struct literal** you must always pass in the field values in the **same order** in which they are declared in the struct.
+When using a **struct literal** you must always pass in the field values in the **same order** in which they are declared in the **struct**.
 
 You can also use  the **name: value** syntax for initializing a **struct**
 
@@ -27,9 +27,9 @@ You can also use  the **name: value** syntax for initializing a **struct**
 p2 := Point{x: 7, y: 9}
 ```
 
-_(the order of fields is irrelevant when using this syntax)_. Note:  This allows you to initialize only a subset of fields. All the uninitialized fields are set to their corresponding zero value.
+_(the order of fields is irrelevant when using this syntax)_. Note:  This allows you to initialize only a **subset of fields**. All the uninitialized fields are set to their corresponding zero values.
 
-To access individual fields of a struct you have to use dot (.) operator.  For example,
+To access individual fields of a **struct** you have to use dot (.) operator.  For example,
 
 ```go
 	fmt.Printf("Point #1: (%0.1f, %0.1f)\n", p1.x, p1.y)
