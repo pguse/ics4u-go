@@ -128,3 +128,59 @@ alice      85
 bob        90
 charlie    75
 ```
+
+## Using a Map as a Counter
+
+You can use a **map** to keep track of the number of occurrences of some type of data.  For example, if we wanted to count the number of emojis in the following string
+
+```go
+text := "👽😊🍟😊👽😺👽"
+```
+
+we can first create a **map** with **keys** of type **rune** and values of type **int**,
+
+```go
+emoji := make(map[rune]int)
+```
+
+A **rune** in Go refers to a single character.  The following code, iterates through the string **text** using the **for-range** loop,
+
+```go
+for _, em := range text {
+	emoji[em] += 1
+	fmt.Printf("%c ", em)
+}
+```
+
+and has an output
+
+```
+👽 😊 🍟 😊 👽 😺 👽
+```
+
+A map in Go has a default value for any **key**, that depends on the type of **value** in the **map**.  In this case, every possible **key** has a default value of 0 (the default value for **int**).  So, the line
+
+```go
+emoji[em] += 1
+```
+
+updates the **value** for any **key** regardless of whether the **key** already exists or not.
+
+The following code,
+
+```go
+for k := range emoji {
+	fmt.Printf("%c : %d\n", k, emoji[k])
+}
+```
+
+iterates through the **map** using the **for-range** loop and outputs the **key-value** pairs as follows,
+
+```
+👽 : 3
+😊 : 2
+🍟 : 1
+😺 : 1
+```
+
+The order of the output will vary, because the **key-value** pairs in **maps** are not stored in any particular order.
