@@ -25,7 +25,7 @@ for i, digit := range number {
 }
 ```
 
-The **for-range** loop allows you to loop through any sequence of values _(string, array, splice, etc)_ without knowing/using the length of the sequence.  It stores two values:  1. The index **i** of an element; 2. The value **digit** of the element.  Surprisingly _(based on your experience with Python)_, the output of the code above is,
+The **for-range** loop allows you to loop through any sequence of elements _(string, array, splice, etc)_ without knowing/using the length of the sequence.  It stores two values:  1. The index **i** of an element; 2. The value **digit** of the element.  Surprisingly _(based on your experience with Python)_, the output of the code above is,
 
 ```
 0 49
@@ -47,7 +47,7 @@ giving us the output,
 2 3
 ```
 
-What we are encountering in this problem is a data type in Go called a **rune**.  The variable **digit** is a **rune**. It can either be represented as its **unicode** value or its associated **character**.  However, in order to solve this problem, we need to use the numerical value of the digits.  We do this be using a package called **strconv** which handles **string** [conversions](https://pkg.go.dev/strconv).
+What we are encountering in this problem is a data type in **Go** called a **rune**.  The variable **digit** is a **rune**. It can either be represented as its **unicode** value or its associated **character**.  However, in order to solve this problem, we need to use the numerical value of the digits.  We do this be using a package called **strconv** which handles **string** [conversions](https://pkg.go.dev/strconv).
 
 ## The strconv Package
 
