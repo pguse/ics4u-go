@@ -25,7 +25,7 @@ for i, digit := range number {
 }
 ```
 
-The ##for-range** loop allows you to loop through any sequence of values _(string, array, splice, etc)_ without knowing/using the length of the sequence.  It stores two values:  1. The index **i** of an element; 2. The value **digit** of the element.  Surprisingly _(based on your experience with Python)_, the output of the code above is,
+The **for-range** loop allows you to loop through any sequence of values _(string, array, splice, etc)_ without knowing/using the length of the sequence.  It stores two values:  1. The index **i** of an element; 2. The value **digit** of the element.  Surprisingly _(based on your experience with Python)_, the output of the code above is,
 
 ```
 0 49
