@@ -119,34 +119,3 @@ if strconv.Itoa(sum) == number {
 ```
 
 Notice the use of the **strconv.Itoa** function.  It converts an **int** to a **string** in order to make the comparison with the original **string** called **number**.
-
-
-```go
-package main
-
-import (
-	"fmt"
-	"math"
-	"strconv"
-)
-
-func main() {
-	var number string = "153"
-	sum := 0
-
-	for _, digit := range number {
-		n, _ := strconv.Atoi(string(digit)) // converts string to int
-		sum += int(math.Pow(float64(n), float64(len(number))))
-	}
-
-	// Is this an Armstrong number?
-	if strconv.Itoa(sum) == number {
-		fmt.Println("Armstrong Number!")
-	} else {
-		fmt.Println("Not an Armstrong Number")
-	}
-	fmt.Println(sum)
-
-}
-
-```
