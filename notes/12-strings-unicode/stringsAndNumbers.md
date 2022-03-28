@@ -25,7 +25,7 @@ for i, digit := range number {
 }
 ```
 
-The **for-range** loop allows you to loop through any sequence of elements _(string, array, splice, etc)_ without knowing/using the length of the sequence.  It stores two values:  1. The index **i** of an element; 2. The value **digit** of the element.  Surprisingly _(based on your experience with Python)_, the output of the code above is,
+The **for-range** loop allows you to loop through any sequence of elements _(string, array, splice, etc)_ without knowing/using the length of the sequence.  It stores two values:  **1.** The index **i** of an element; **2.** The value **digit** of the element.  Surprisingly _(based on your experience with Python)_, the output of the code above is,
 
 ```
 0 49
@@ -64,7 +64,7 @@ for i, digit := range number {
 }
 ```
 
-The **strconv.Atoi** function attempts to convert a **string** to an **int**.  Notice:  1.  We must first convert the **rune** called **digit** to a **string**; 2. The **strconv.Atoi** function returns two values, stored as **n** and **err**.  The variable **n** is the integer value, and **err** stores the error if one occurs in the attempted conversion.  For example, if you attempted to convert ```"apple"``` to an **int** and error would be produced.  We can simplify our code above by replacing variables we don't need with the **underscore** character **_**.  This is a simpler version of the same code,
+The **strconv.Atoi** function attempts to convert a **string** to an **int**.  Notice:  **1.**  We must first convert the **rune** called **digit** to a **string**; **2.** The **strconv.Atoi** function returns two values, stored as **n** and **err**.  The variable **n** is the integer value, and **err** stores the error if one occurs in the attempted conversion.  For example, if you attempted to convert ```"apple"``` to an **int** and error would be produced.  We can simplify our code above by replacing variables we don't need with the **underscore** character **_**.  This is a simpler version of the same code,
 
 ```go
 for _, digit := range number {
