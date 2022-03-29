@@ -30,7 +30,7 @@ Modify the starter code called **fractionMethods.go**, in completing the followi
 
 ## 10-2:  Divide
 
-Complete the following function, that returns the **quotient** of **f / f1**, where **f** and **f1** are of type **Fraction**.
+Complete the following method, that returns the **quotient** of **f / f1**, where **f** and **f1** are of type **Fraction**.
 
 ```go
 func (f Fraction) Div(f1 Fraction) Fraction {
@@ -40,7 +40,7 @@ func (f Fraction) Div(f1 Fraction) Fraction {
 
 ## 10-3:  Add
 
-Complete the following function, that returns the **sum** of **f + f1**, where **f** and **f1** are of type **Fraction**.
+Complete the following method, that returns the **sum** of **f + f1**, where **f** and **f1** are of type **Fraction**.
 
 ```go
 func (f Fraction) Add(f1 Fraction) Fraction {
@@ -50,7 +50,7 @@ func (f Fraction) Add(f1 Fraction) Fraction {
 
 ## 10-4:  Subtract
 
-Complete the following function, that returns the **difference** of **f - f1**, where **f** and **f1** are of type **Fraction**.
+Complete the following method, that returns the **difference** of **f - f1**, where **f** and **f1** are of type **Fraction**.
 
 ```go
 func (f Fraction) Subt(f1 Fraction) Fraction {
