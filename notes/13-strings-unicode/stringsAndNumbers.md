@@ -119,3 +119,33 @@ if strconv.Itoa(sum) == number {
 ```
 
 Notice the use of the **strconv.Itoa** function.  It converts an **int** to a **string** in order to make the comparison with the original **string** called **number**.
+
+## Be Careful - Converting int to string
+
+You might think that maybe we don't need to use the **strconv.Itoa** function.  Why wouldn't the following code be o.k.?
+
+```go
+var x int = 65
+y := string(x)
+fmt.Println(x, y)
+```
+
+You might be surprised that the output is
+
+```
+65 A
+```
+
+Converting the **int** 65 to a **string** results in an **A**, which is the character that **65** encodes under the **unicode/ascii** system.  If you really want to convert the **int** 65 into the **string** "65", then you must change to code to,
+
+```go
+var x int = 65
+y := strconv.Itoa(x)
+fmt.Println(x, y)
+```
+
+to give the output,
+
+```
+65 65
+```
