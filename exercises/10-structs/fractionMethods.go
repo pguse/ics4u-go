@@ -10,15 +10,12 @@ type Fraction struct {
 func (f Fraction) String() string {
 	return fmt.Sprintf("%d / %d", f.Num, f.Den)
 }
-
 func (f Fraction) Mult(f1 Fraction) Fraction {
-	return Fraction{f.Num * f1.Num, f.Den * f1.Den}
+	return Fraction{}
 }
-
 func (f Fraction) Div(f1 Fraction) Fraction {
 	return Fraction{}
 }
-
 func (f Fraction) Add(f1 Fraction) Fraction {
 	return Fraction{}
 }
