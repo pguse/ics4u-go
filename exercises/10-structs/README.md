@@ -57,3 +57,49 @@ func (f Fraction) Subt(f1 Fraction) Fraction {
 	return Fraction{}
 }
 ```
+
+Modify the starter code called **cardGame.go**, in completing the following exercises.
+
+## 10-5: Flush
+
+Create a **Boolean** method called **Flush** that determines if a hand of cards is a flush _(all the same suit)_.
+
+```go
+func (h Hand) Flush() bool {
+	// All cards have the same suit
+	return false
+}
+```
+
+## 10-6: Straight
+
+Create a **Boolean** method called **Straight** that determines if a hand of cards is a straight _(sequence of ranks)_.  _**Note:**  Assume the hand of cards is already sorted_.
+
+```go
+func (h Hand) Straight() bool {
+	// Cards are in sequential order - assume a sorted hand
+	return false
+}
+```
+
+## 10-7: Straight Flush
+
+Create a **Boolean** function called **StraightFlush** that determines if a hand of cards is a straight flush _(sequence of ranks, all the same suit)_.  _**Note:**  Assume the hand of cards is already sorted_."
+
+```go
+func (h Hand) StraightFlush() bool {
+	// Cards are in sequential order with same suit - assume a sorted hand
+	return false
+}
+```
+
+## 10-8: Pair
+
+Create a **Boolean** function called **Pair** that determines if a hand of cards has a single pair
+
+```go
+func (h Hand) Pair() bool {
+	// Two cards with the same rank
+	return false
+}
+```
