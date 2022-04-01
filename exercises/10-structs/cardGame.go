@@ -27,7 +27,6 @@ func (d *Deck) Init() {
 		}
 	}
 }
-
 func (d Deck) Shuffle() {
 	rand.Seed(time.Now().UnixNano())
 	for i := range d {
@@ -37,7 +36,6 @@ func (d Deck) Shuffle() {
 		d[n] = swap
 	}
 }
-
 func (d *Deck) DealHand() Hand {
 	h := Hand{}
 	for i := 0; i < 5; i++ {
@@ -47,11 +45,27 @@ func (d *Deck) DealHand() Hand {
 	return h
 }
 
+func (h Hand) Flush() bool {
+	// All cards have the same suit
+	// for _, c := range h {}
+	return false
+}
+
+func (h Hand) Pair() bool {
+	// Two cards with the same rank
+	return false
+}
+
+func (h Hand) Straight() bool {
+	// Cards are in sequential order
+	return false
+}
+
 func main() {
 	// Create a fill a deck
 	deck := Deck{}
 	deck.Init()
-	fmt.Println("Original Deck: ")
+	fmt.Println("\nOriginal Deck: ")
 	fmt.Println(deck)
 	// Shuffle the deck
 	deck.Shuffle()
