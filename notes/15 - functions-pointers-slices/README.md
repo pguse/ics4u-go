@@ -75,7 +75,7 @@ the memory address of variable **a** is passed into the function as an argument.
 10
 ```
 
-## [Example](https://go.dev/play/p/2qrsiqHTXmr) Using a Slice of Values of Type **int**
+## [Example](https://go.dev/play/p/3WpY-mXo9qA) Using a Slice of Values of Type **int**
 
 _**Note:**  You can try the code described below at the link above._
 
