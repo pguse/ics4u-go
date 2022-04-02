@@ -22,13 +22,13 @@ doubleInt(a)
 fmt.Println(a)
 ```
 
-The **int** value store as variable **a** is copied to variable **n** in the **doubleInt** function.  As a result, when the value of **n** is doubled inside the function, the value of **a** remains unchanged.  We see this in the output of this code,
+The **int** value stored as variable **a** is a copy of the variable **n** in the **doubleInt** function.  As a result, when the value of **n** is doubled inside the function, the value of **a** remains unchanged.  We see this in the output of this code,
 
 ```
 5
 ```
 
-The value of **n** inside the function only exists within the function _(called a **local** variable)_ and is not connected the the variable **a**.
+The value of **n** inside the function only exists within the function _(called a **local** variable)_ and is not connected to the variable **a**.
 
 In contrast, the function **doubleIntReturn**,
 
