@@ -10,3 +10,29 @@ Create a **folder** on your computer called **poker**. Copy all of the go files 
 Your **poker** folder should now look like this:
 
 ![poker folder](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/pokerFolderTerminal.png)
+
+In order to run our program, we need to do two new steps.  First, we will define our project as a **module**.  We do this in the **Terminal** using the command,
+
+```
+go mod init poker
+```
+
+Now your **poker** folder should look like this
+
+![poker folder with go.mod file](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/pokerFolderModuleTerminal.png)
+
+The **go.mod** file that you have created looks like this when you open it.
+
+![go mod file](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/pokerFolderModuleFile.png)
+
+It just contains the name of the module **poker** and the version of **Go** you were using when creating the file.
+
+The second new step involves how we run our project.  In the **Terminal**, when we are within the **poker** folder, type
+
+```
+go run .
+```
+
+and you should see the following output.
+
+![go run file](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/pokerFolderRun.png)
