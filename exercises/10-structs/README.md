@@ -123,6 +123,7 @@ Create a **boolean** method called **Pair** that determines if a hand of cards h
 ```go
 func (h Hand) Pair() bool {
 	// Two cards with the same rank
+	// Assume a sorted hand
 	return false
 }
 ```
