@@ -108,21 +108,19 @@ func (h Hand) Pair() bool {
 }
 
 func main() {
-	// Create a fill a deck
+	// Create and fill a deck
 	deck := Deck{}
 	deck.Init()
-	/*fmt.Println("\nOriginal Deck: ")
+	fmt.Println("\nOriginal Deck: ")
 	fmt.Println(deck)
-	// Shuffle the deck*/
-	//deck.Shuffle()
-	//fmt.Println("Shuffled Deck: ")
-	//fmt.Println(deck)
+	//Shuffle the deck
+	deck.Shuffle()
+	fmt.Println("Shuffled Deck: ")
+	fmt.Println(deck)
 	// Deal a hand of cards
 	hand := deck.DealHand()
+	fmt.Println("Hand: ")
 	fmt.Println(hand)
-	//fmt.Println("Hand: ")
-	fmt.Println(hand.StraightFlush())
-	/*fmt.Println(hand)
 	// Output the smaller deck
 	fmt.Println("Modified Deck: ")
 	fmt.Println(deck)*/
