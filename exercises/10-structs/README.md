@@ -126,3 +126,5 @@ func (h Hand) Pair() bool {
 	return false
 }
 ```
+
+Note:  Since **value** is a **global variable** it can also be used in the **Pair** method.
