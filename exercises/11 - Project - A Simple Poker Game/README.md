@@ -9,4 +9,4 @@ Create a **folder** on your computer called **poker**. Copy all of the go files 
 
 Your **poker** folder should now look like this:
 
-[poker folder]()
+![poker folder](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/pokerFolderTerminal.png)
