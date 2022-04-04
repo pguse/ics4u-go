@@ -36,3 +36,22 @@ go run .
 and you should see the following output.
 
 ![go run file](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/pokerFolderRun.png)
+
+
+## Exercises
+
+### 11-0: Flush-Straight-StraightFlush-Pair Functions
+
+Go back to the **Struct** exercises and copy your code from your **Flush**, **Straight**, **StraightFlush**, and **Pair** functions into the **hand.go** file.
+
+### 11-1: Three-of-A-Kind
+
+Create a **ThreeOfAKind** function in the **hand.go** file.
+
+### 11-2: Four-of-A-Kind
+
+Create a **FourOfAKind** function in the **hand.go** file.
+
+### 11-3: Full House
+
+Create a **FullHouse** function in the **hand.go** file.
