@@ -70,7 +70,7 @@ func main() {
 }
 ```
 
-in ascending order.  The output is,
+in **ascending order**.  The output is,
 
 ```
 [-10 -5 0 2 3 6 8 11 15]
@@ -88,4 +88,60 @@ with the output,
 
 ```
 [c go haskell java pyret python racket ruby]
+```
+
+The **sort** package contains the **sort.Interface** which looks like this,
+
+```go
+type Interface interface {
+    Len() int
+    Less(i, j int) bool
+    Swap(i, j int)
+}
+```
+
+The **interface** contains three functions:  **Len**, **Less**, and **Swap**.  So, lets say we want to be able to sort our **type** called **Hand**.  All we need to do is create these three methods with a **receiver** of type **Hand**.  For example, the following code
+
+```go
+var value = map[string]int{"A": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 11, "Q": 12, "K": 13}
+
+type Hand []Card
+
+func (h Hand) String() string {
+	hand := ""
+	for _, c := range h {
+		hand += fmt.Sprintf("%v ", c)
+	}
+	return hand
+}
+
+func (h Hand) Len() int {
+	return len(h)
+}
+
+func (h Hand) Less(i, j int) bool {
+	return value[h[i].Rank] < value[h[j].Rank]
+}
+
+func (h Hand) Swap(i, j int) {
+	h[i], h[j] = h[j], h[i]
+}
+```
+
+implements the **Len**, **Less**, and **Swap** methods along with a **String** method.  Notice:  to say that a **Card** in a **Hand** is less than another one, the values of their ranks are compared using the **values** map.
+
+The following code provides an example of how to sort an instance of our **Hand** type,
+
+```go
+h := Hand{Card{"J", '♣'}, Card{"A", '♠'}, Card{"5", '♢'}, Card{"10", '♡'}, Card{"A", '♡'}}
+fmt.Println(h)
+sort.Sort(h)
+fmt.Println(h)
+```
+
+producing the output
+
+```
+J♣ A♠ 5♢ 10♡ A♡
+A♠ A♡ 5♢ 10♡ J♣
 ```
