@@ -28,7 +28,14 @@ func (h Hand) Swap(i, j int) {
 
 func (h Hand) Flush() bool {
 	// All cards have the same suit
-	return false
+	result := true
+	for i := 0; i < len(h)-1; i++ {
+		if h[i].Suit != h[i+1].Suit {
+			result = false
+			break
+		}
+	}
+	return result
 }
 
 func (h Hand) Straight() bool {
