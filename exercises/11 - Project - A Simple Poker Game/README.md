@@ -42,11 +42,11 @@ and you should see the following output.
 
 ### 11-0: Flush-Straight-StraightFlush-Pair Functions
 
-Go back to the **Struct** exercises and copy your code from your **Flush**, **Straight**, **StraightFlush**, and **Pair** functions into the **hand.go** file.
+Go back to the **Struct** exercises and copy your code from your **Flush**, **Straight**, **StraightFlush**, and **Pair** methods into the **hand.go** file.
 
 ### 11-1: Three-of-A-Kind
 
-Create a **ThreeOfAKind** function in the **hand.go** file.
+Create a **ThreeOfAKind** method in the **hand.go** file.
 
 ```go
 func (h Hand) ThreeOfAKind() bool {
@@ -57,7 +57,7 @@ func (h Hand) ThreeOfAKind() bool {
 
 ### 11-2: Four-of-A-Kind
 
-Create a **FourOfAKind** function in the **hand.go** file.
+Create a **FourOfAKind** method in the **hand.go** file.
 
 ```go
 func (h Hand) FourOfAKind() bool {
@@ -68,7 +68,7 @@ func (h Hand) FourOfAKind() bool {
 
 ### 11-3: Full House
 
-Create a **FullHouse** function in the **hand.go** file.
+Create a **FullHouse** method in the **hand.go** file.
 
 ```go
 func (h Hand) FullHouse() bool {
