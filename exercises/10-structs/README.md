@@ -4,6 +4,8 @@ In Visual Studio Code, create a folder called **Structs** and then open it. Now 
 
 ## Exercises
 
+Complete the following exercises.  When completed, submit your files in the **13 - Structs** shared folder in OneDrive.
+
 Modify the starter code called **pointFunctions.go**, in completing the following exercises.
 
 ## 10-0:  Distance
