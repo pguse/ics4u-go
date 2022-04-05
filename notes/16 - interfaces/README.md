@@ -55,7 +55,11 @@ without using the **dotted notation** to run the **String** method on the **Card
 
 ## Example #2: Sort
 
-**Go** has a standard **sort** package for doing sorting.  The sorting functions sort data **in-place**, which means they do not return a copy of the sorted sequence.  Here is an example of how to **sort** a **slice of integers**,
+**Go** has a standard **sort** package for doing sorting.  The sorting functions sort data **in-place**, which means they do not return a copy of the sorted sequence.
+
+### Integers
+
+Here is an example of how to **sort** a **slice of integers**,
 
 ```go
 import (
@@ -75,6 +79,8 @@ in **ascending order**.  The output is,
 ```
 [-10 -5 0 2 3 6 8 11 15]
 ```
+
+### Strings
 
 If you want to **sort** a **slice of strings**, the following code provides an example,
 
@@ -100,7 +106,11 @@ type Interface interface {
 }
 ```
 
-The **interface** contains three functions:  **Len**, **Less**, and **Swap**.  So, lets say we want to be able to sort our **type** called **Hand**.  All we need to do is create these three methods with a **receiver** of type **Hand**.  For example, the following code
+The **interface** contains three functions:  **Len**, **Less**, and **Swap**.
+
+### Hand
+
+So, lets say we want to be able to sort our **type** called **Hand**.  All we need to do is create these three methods with a **receiver** of type **Hand**.  For example, the following code
 
 ```go
 var value = map[string]int{"A": 1, "2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 10, "J": 11, "Q": 12, "K": 13}
