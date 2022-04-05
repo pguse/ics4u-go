@@ -48,10 +48,31 @@ Go back to the **Struct** exercises and copy your code from your **Flush**, **St
 
 Create a **ThreeOfAKind** function in the **hand.go** file.
 
+```go
+func (h Hand) ThreeOfAKind() bool {
+	// Three cards with the same rank - assume a sorted hand
+	return false
+}
+```
+
 ### 11-2: Four-of-A-Kind
 
 Create a **FourOfAKind** function in the **hand.go** file.
 
+```go
+func (h Hand) FourOfAKind() bool {
+	// Four cards with the same rank - assume a sorted hand
+	return false
+}
+```
+
 ### 11-3: Full House
 
 Create a **FullHouse** function in the **hand.go** file.
+
+```go
+func (h Hand) FullHouse() bool {
+	// Two cards with the same rank and Three cards with same rank - assume a sorted hand
+	return false
+}
+```
