@@ -101,4 +101,4 @@ func test() {
 
 Here is what the output should look like before editing the **test.go** file
 
-![test output]()
+![test output](https://github.com/pguse/ics4u-go/blob/main/exercises/11%20-%20Project%20-%20A%20Simple%20Poker%20Game/test.png)
