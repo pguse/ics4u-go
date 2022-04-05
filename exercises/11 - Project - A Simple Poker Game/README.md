@@ -40,6 +40,8 @@ and you should see the following output.
 
 ## Exercises
 
+Complete the following exercises.  When completed, copy your **poker** folder to the **14 - A Simple Poker Game** shared folder on OneDrive.
+
 ### 11-0: Flush-Straight-StraightFlush-Pair Functions
 
 Go back to the **Struct** exercises and copy your code from your **Flush**, **Straight**, **StraightFlush**, and **Pair** methods into the **hand.go** file.
@@ -76,3 +78,27 @@ func (h Hand) FullHouse() bool {
 	return false
 }
 ```
+
+### 11-4: Testing
+
+Copy the **test.go** file into your **poker** folder.  Complete tests in the **test** function for the following methods:  **Straight**, **StraightFlush**, **Pair**, **ThreeOfAKind**, **FourOfAKind**, and **FullHouse**.  Run the **test** function in **main**.  Here is the code already provided in **test.go** that tests your **Flush** method.
+
+```go
+func test() {
+	// A hand with nothing
+	h1 := Hand{Card{"A", '♢'}, Card{"3", '♡'}, Card{"7", '♣'}, Card{"J", '♠'}, Card{"K", '♡'}}
+	// A hand with a flush
+	h2 := Hand{Card{"A", '♣'}, Card{"3", '♣'}, Card{"5", '♣'}, Card{"7", '♣'}, Card{"9", '♣'}}
+
+	// Testing Flush()
+	if !h1.Flush() && h2.Flush() {
+		fmt.Println("Flush: OK")
+	} else {
+		fmt.Println("Flush: Not OK")
+	}
+}
+```
+
+Here is what the output should look like before editing the **test.go** file
+
+![test output]()
