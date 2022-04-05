@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 var value = map[string]int{
 	"A":  1,
 	"2":  2,
@@ -19,7 +21,23 @@ var value = map[string]int{
 type Hand []Card
 
 func (h Hand) String() string {
-	return ""
+	hand := ""
+	for _, c := range h {
+		hand += fmt.Sprintf("%v ", c)
+	}
+	return hand
+}
+
+func (h Hand) Len() int {
+	return len(h)
+}
+
+func (h Hand) Less(i, j int) bool {
+	return value[h[i].Rank] < value[h[j].Rank]
+}
+
+func (h Hand) Swap(i, j int) {
+	h[i], h[j] = h[j], h[i]
 }
 
 func (h Hand) Flush() bool {
