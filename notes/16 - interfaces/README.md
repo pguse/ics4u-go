@@ -1,0 +1,91 @@
+# Interfaces
+
+We will deal with this topic in a limited way this year.  An **interface** is an **abstract type** that we are going to encounter in a couple examples.
+
+## Example #1 - The Stringer Interface
+
+We have been using the **fmt** package when we need to produce output to the console using the  **Print**, **Println**, and **Printf** methods.  Within the **fmt** package there is an **abstract type** called the **Stringer** interface.  Here is what it looks like,
+
+```go
+type Stringer interface {
+    String() string
+}
+```
+
+How does this affect us?  Well, for any **type** that we create, if we include a **String** method with a **receiver** of that type, then any method from the **fmt** package will be able to output our type automatically.  For example, we have just recently created a **Card** type that looks like this,
+
+```go
+type Card struct {
+	Rank string // Ace, Queen, 9, etc.
+	Suit rune   // Diamond, Spade, etc
+}
+
+func (c Card) String() string {
+	return fmt.Sprintf("%s%c", c.Rank, c.Suit)
+}
+```
+
+We have learned that to use a **method** that we create, the **dotted notation** is used as demonstrated in the following example,
+
+```go
+c := Card{"A", '♣'}
+fmt.Printf("Here is a card: %v\n", c.String())
+```
+
+This produces the output,
+
+```
+Here is a card: A♣
+```
+
+But, the **fmt** package actually already knows how to output an **instance** of our **Card** type, since we have included a **String** method.  So, this code
+
+```go
+c := Card{"A", '♣'}
+fmt.Printf("Here is a card: %v\n", c)
+```
+
+also produces the output,
+
+```
+Here is a card: A♣
+```
+
+without using the **dotted notation** to run the **String** method on the **Card** instance **c**.
+
+## Example #2: Sort
+
+**Go** has a standard **sort** package for doing sorting.  The sorting functions sort data **in-place**, which means they do not return a copy of the sorted sequence.  Here is an example of how to **sort** a **slice of integers**,
+
+```go
+import (
+	"fmt"
+	"sort"
+)
+
+func main() {
+	values := []int{2, -5, 8, -10, 3, 6, 0, 15, 11}
+	sort.Ints(values)
+	fmt.Println(values)
+}
+```
+
+in ascending order.  The output is,
+
+```
+[-10 -5 0 2 3 6 8 11 15]
+```
+
+If you want to **sort** a **slice of strings**, the following code provides an example,
+
+```go
+values := []string{"ruby", "python", "go", "c", "java", "pyret", "haskell", "racket"}
+sort.Strings(values)
+fmt.Println(values)
+```
+
+with the output,
+
+```
+[c go haskell java pyret python racket ruby]
+```

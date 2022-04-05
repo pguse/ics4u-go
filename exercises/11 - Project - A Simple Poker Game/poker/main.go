@@ -7,5 +7,5 @@ import (
 func main() {
 	c := Card{"A", '♣'}
 	fmt.Println("Welcome to our Poker Game")
-	fmt.Printf("Here is a card: %s\n", c)
+	fmt.Printf("Here is a card: %v\n", c)
 }
