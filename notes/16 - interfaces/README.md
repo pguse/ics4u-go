@@ -1,5 +1,16 @@
 # Interfaces
 
+## Key Ideas
+
+* How can we use interfaces found within a package?
+* Why would we want/need to use an interface?
+
+An **interface** in our daily lives is what we are presented with, on the surface, that allows us to interact with a machine or piece of technology.  For example, your phone's interface consists of a touchscreen and icons.  A modern TV has an interface that consists of a screen of icons and a remote.  A radio in a car may have an interface that consists of physical dials.
+
+When we use an interface, we don't need to know how the object in question works under the surface.  We only need to know **what the interface consists of** and **how to operate its parts**.
+
+In **Go**, an **interface within a package** just consists of **a set of method names**.  If you create a new **type**, and provide it with methods of the same name as an interface, then a particular package knows how to deal with that new type.  In the note below, you will read how the **Stringer** interface in the **fmt** package allows you to teach **Go** how to output your new type in the console with any method within the **fmt** package - e.g. **Print**, **Printf**, **Println**, **Sprintf**, etc.
+
 We will deal with this topic in a limited way this year.  An **interface** is an **abstract type** that we are going to encounter in a couple examples.
 
 ## Example #1 - The Stringer Interface

@@ -49,6 +49,14 @@ func (h Hand) StraightFlush() bool {
 }
 
 func (h Hand) Pair() bool {
-	// Two cards with the same rank
+	return false
+}
+
+func (h Hand) ThreeOfAKind() bool {
+	// Two cards with the same rank - assume a sorted hand
+	return false
+}
+
+func (h Hand) FullHouse() bool {
 	return false
 }
