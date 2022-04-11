@@ -41,7 +41,7 @@ produces the error
 cannot use anotherSlice (type []int) as type int in append
 ```
 
-because the **append** function is expecting a **slice** and a single value as arguments.  However, **append** is called a **variadic** function, meaning it actually can accept multiple arguments.  For example, the following code will work,
+because the **append** function is expecting a **slice** and a single value as arguments.  However, **append** is called a **variadic** function, meaning it actually can accept multiple arguments.  For example, the following code,
 
 ```go
 numberSlice := []int{87, 65, 92}
@@ -49,7 +49,7 @@ numberSlice = append(numberSlice, 54, 35)
 fmt.Println(numberSlice)
 ```
 
-producing the output
+will work, producing the output
 
 ```
 [87 65 92 54 35]
@@ -70,7 +70,7 @@ produces the output
 [87 65 92 15 76 44]
 ```
 
-without error, because the ***...** converts the slice to a group of multiple argments, which the **append** function can handle.
+without error, because the **...** converts the slice to a group of multiple arguments, which the **append** function can handle.
 
 ## Using Slices in Functions
 
