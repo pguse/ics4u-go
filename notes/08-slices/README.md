@@ -41,7 +41,7 @@ produces the error
 cannot use anotherSlice (type []int) as type int in append
 ```
 
-because the **append** function is expecting a **slice** and a single value as arguments.  However, **append** is called a **variadic** function, meaning it actually can accept multiple arguments.  For example, the following code,
+because the **append** function is expecting a **slice** and a single value as arguments.  However, **append** is called a **variadic** function, meaning it actually can accept multiple arguments.  We have already seen **variadic** functions such as **Println** and **Print** from the **fmt** package.  For example, the following code,
 
 ```go
 numberSlice := []int{87, 65, 92}
