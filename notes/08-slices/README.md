@@ -55,7 +55,7 @@ producing the output
 [87 65 92 54 35]
 ```
 
-In order to **append** a slice to another slice, your must use **...** at the end of the slice name.  The following code
+In order to **append** a slice to another slice, you must use **...** at the end of the slice name.  The following code
 
 ```go
 numberSlice := []int{87, 65, 92}
