@@ -194,7 +194,13 @@ the **Split** function is used, as follows
 lines := strings.Split(string(data), "\r\n")
 ```
 
-to split the string into a **slice of strings**, using the **delimiter** ```\r\n``` found at the end of each line of the text file.  The original text file **fiveLetterWords.txt**, 
+to split the string into a **slice of strings**, using the **delimiter** ```\r\n``` found at the end of each line of the text file.
+
+### Note:
+
+A text file prepared on a Windows machine uses ```\r\n``` as the line ending _(carriage return and line feed)_, while a text file created on a Mac uses just ```\n``` as the line ending _(just a line feed)_.
+
+The original text file **fiveLetterWords.txt**, 
 
 ```
 swirl
