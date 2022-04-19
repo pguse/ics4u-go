@@ -25,6 +25,53 @@ produces the output
 [87 65 92 99]
 ```
 
+## Concatenating Two Slices
+
+Let's say we want to concatenate two slices.  If we try to use the **append** function, the following code
+
+```go
+numberSlice := []int{87, 65, 92}
+anotherSlice := []int{15, 76, 44}
+result := append(numberSlice, anotherSlice)
+```
+
+produces the error
+
+```
+cannot use anotherSlice (type []int) as type int in append
+```
+
+because the **append** function is expecting a **slice** and a single value as arguments.  However, **append** is called a **variadic** function, meaning it actually can accept multiple arguments.  We have already seen **variadic** functions such as **Println** and **Print** from the **fmt** package.  For example, the following code,
+
+```go
+numberSlice := []int{87, 65, 92}
+numberSlice = append(numberSlice, 54, 35)
+fmt.Println(numberSlice)
+```
+
+will work, producing the output
+
+```
+[87 65 92 54 35]
+```
+
+In order to **append** a slice to another slice, you must use **...** at the end of the slice name.  The following code
+
+```go
+numberSlice := []int{87, 65, 92}
+anotherSlice := []int{15, 76, 44}
+result := append(numberSlice, anotherSlice...)
+fmt.Println(result)
+```
+
+produces the output
+
+```
+[87 65 92 15 76 44]
+```
+
+without error, because the **...** converts the slice to a group of multiple arguments, which the **append** function can handle.
+
 ## Using Slices in Functions
 
 Passing a slice into a function allows you to create a single function that acts on variable length sequences of values.  The following function,

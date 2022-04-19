@@ -4,6 +4,8 @@ In Visual Studio Code, create a folder called **Structs** and then open it. Now 
 
 ## Exercises
 
+Complete the following exercises.  When completed, submit your files in the **13 - Structs** shared folder in OneDrive.
+
 Modify the starter code called **pointFunctions.go**, in completing the following exercises.
 
 ## 10-0:  Distance
@@ -57,3 +59,75 @@ func (f Fraction) Subt(f1 Fraction) Fraction {
 	return Fraction{}
 }
 ```
+
+Modify the starter code called **cardGame.go**, in completing the following exercises.
+
+## 10-5: Flush
+
+Create a **boolean** method called **Flush** that determines if a hand of cards is a flush _(all the same suit)_.
+
+```go
+func (h Hand) Flush() bool {
+	// All cards have the same suit
+	return false
+}
+```
+
+## 10-6: Straight
+
+Create a **boolean** method called **Straight** that determines if a hand of cards is a straight _(sequence of ranks)_.  _**Note:**  Assume the hand of cards is already sorted_.
+
+```go
+func (h Hand) Straight() bool {
+	// Cards are in sequential order - assume a sorted hand
+	return false
+}
+```
+
+Note:  This function requires that we compare the values of cards.  Since the **rank** is stored as a **string**, this comparison is not obvious.  The **global variable** value, defined at the top of **cardGame.go**,
+
+```go
+var value = map[string]int{
+	"A":  1,
+	"2":  2,
+	"3":  3,
+	"4":  4,
+	"5":  5,
+	"6":  6,
+	"7":  7,
+	"8":  8,
+	"9":  9,
+	"10": 10,
+	"J":  11,
+	"Q":  12,
+	"K":  13,
+}
+```
+
+maps the **rank** of a card to its **value**.  This **map** can be used in the **Straight** method.
+
+
+## 10-7: Straight Flush
+
+Create a **boolean** method called **StraightFlush** that determines if a hand of cards is a straight flush _(sequence of ranks, all the same suit)_.  _**Note:**  Assume the hand of cards is already sorted_."
+
+```go
+func (h Hand) StraightFlush() bool {
+	// Cards are in sequential order with same suit - assume a sorted hand
+	return false
+}
+```
+
+## 10-8: Pair
+
+Create a **boolean** method called **Pair** that determines if a hand of cards has a single pair
+
+```go
+func (h Hand) Pair() bool {
+	// Two cards with the same rank
+	// Assume a sorted hand
+	return false
+}
+```
+
+Note:  Since **value** is a **global variable** it can also be used in the **Pair** method.
