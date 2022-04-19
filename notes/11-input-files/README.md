@@ -159,4 +159,68 @@ because the contents **data** of the file are initially stored as a slice of **b
 
 ## Storing each Line of a File
 
-The **strings** package contains a function called **Split** that can split a string efficiently.
+The **strings** package contains a function called **Split** that can split a string efficiently.  The following code reads an entire text file **fiveLetterWords.txt** into memory.
+
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"strings"
+)
+
+func main() {
+	data, err := ioutil.ReadFile("fiveLetterWords.txt")
+	if err != nil {
+		fmt.Println("File reading error", err)
+		return
+	}
+
+	lines := strings.Split(string(data), "\r\n")
+	fmt.Println(lines)
+}
+```
+
+Once **data**, originally a slice of bytes, is converted to a **string** using the code
+
+```go
+string(data)
+```
+
+The **Split** function is used, as follows
+
+```go
+lines := strings.Split(string(data), "\r\n")
+```
+
+to split the string into a **slice of strings**, using the **delimiter** ```\r\n``` found at the end of each line of the text file.  From the original text file **fiveLetterWords.txt**, 
+
+```
+swirl
+argue
+delta
+flick
+totem
+front
+shrub
+parry
+biome
+lapel
+start
+greet
+round
+audit
+lying
+gamma
+civic
+forge
+salad
+essay
+```
+
+gets stored as **lines**, a **slice of strings**
+
+```
+[swirl argue delta flick totem front shrub parry biome lapel start greet round audit lying gamma civic forge salad essay]
+```

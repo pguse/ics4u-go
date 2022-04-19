@@ -14,6 +14,7 @@ func main() {
 	}
 
 	lines := strings.Split(string(data), "\r\n")
-	fmt.Println(lines)
+	//fmt.Println(lines)
+	fmt.Printf("%T", lines)
 	//fmt.Println(string(data))
 }
