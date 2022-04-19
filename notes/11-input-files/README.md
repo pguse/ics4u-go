@@ -159,7 +159,7 @@ because the contents **data** of the file are initially stored as a slice of **b
 
 ## Storing each Line of a File
 
-The **strings** package contains a function called **Split** that can split a string efficiently.  The following code reads an entire text file **fiveLetterWords.txt** into memory.
+The **strings** package contains a function called **Split** that can split a string efficiently.  The following code first reads an entire text file **fiveLetterWords.txt** into memory.
 
 ```go
 package main
@@ -188,13 +188,13 @@ Once **data**, originally a slice of bytes, is converted to a **string** using t
 string(data)
 ```
 
-The **Split** function is used, as follows
+the **Split** function is used, as follows
 
 ```go
 lines := strings.Split(string(data), "\r\n")
 ```
 
-to split the string into a **slice of strings**, using the **delimiter** ```\r\n``` found at the end of each line of the text file.  From the original text file **fiveLetterWords.txt**, 
+to split the string into a **slice of strings**, using the **delimiter** ```\r\n``` found at the end of each line of the text file.  The original text file **fiveLetterWords.txt**, 
 
 ```
 swirl
@@ -219,7 +219,7 @@ salad
 essay
 ```
 
-gets stored as **lines**, a **slice of strings**
+gets stored **_line-by-line_** as **lines**, a **_slice of strings_**
 
 ```
 [swirl argue delta flick totem front shrub parry biome lapel start greet round audit lying gamma civic forge salad essay]
