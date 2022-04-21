@@ -159,4 +159,74 @@ because the contents **data** of the file are initially stored as a slice of **b
 
 ## Storing each Line of a File
 
-The **strings** package contains a function called **Split** that can split a string efficiently.
+The **strings** package contains a function called **Split** that can split a string efficiently.  The following code first reads an entire text file **fiveLetterWords.txt** into memory.
+
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"strings"
+)
+
+func main() {
+	data, err := ioutil.ReadFile("fiveLetterWords.txt")
+	if err != nil {
+		fmt.Println("File reading error", err)
+		return
+	}
+
+	lines := strings.Split(string(data), "\r\n")
+	fmt.Println(lines)
+}
+```
+
+Once **data**, originally a slice of bytes, is converted to a **string** using the code
+
+```go
+string(data)
+```
+
+the **Split** function is used, as follows
+
+```go
+lines := strings.Split(string(data), "\r\n")
+```
+
+to split the string into a **slice of strings**, using the **delimiter** ```\r\n``` found at the end of each line of the text file.
+
+The original text file **fiveLetterWords.txt**, 
+
+```
+swirl
+argue
+delta
+flick
+totem
+front
+shrub
+parry
+biome
+lapel
+start
+greet
+round
+audit
+lying
+gamma
+civic
+forge
+salad
+essay
+```
+
+gets stored **_line-by-line_** as **lines**, a **_slice of strings_**
+
+```
+[swirl argue delta flick totem front shrub parry biome lapel start greet round audit lying gamma civic forge salad essay]
+```
+
+### Note:
+
+A text file prepared on a Windows machine uses ```\r\n``` as the line ending _(carriage return and line feed)_, while a text file created on a Mac uses just ```\n``` as the line ending _(just a line feed)_.
