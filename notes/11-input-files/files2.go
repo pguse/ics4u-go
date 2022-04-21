@@ -6,6 +6,9 @@ import (
 	"strings"
 )
 
+var colorRed = "\033[31m"
+var colorReset = "\033[0m"
+
 func main() {
 	data, err := ioutil.ReadFile("fiveLetterWords.txt")
 	if err != nil {
@@ -14,7 +17,5 @@ func main() {
 	}
 
 	lines := strings.Split(string(data), "\r\n")
-	//fmt.Println(lines)
-	fmt.Printf("%T", lines)
-	//fmt.Println(string(data))
+	fmt.Println(lines)
 }
