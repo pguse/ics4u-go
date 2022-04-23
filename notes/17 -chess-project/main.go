@@ -9,6 +9,9 @@ import (
 )
 
 func main() {
+	var gameNumber int
+	var winner string
+
 	fmt.Println("Welcome to the Chess Project!\n")
 	chessGroup := loadPlayers("students.txt")
 
@@ -16,6 +19,27 @@ func main() {
 
 	games := createGames(chessGroup)
 	displayGames(games)
+
+	// Ask Mr. Profit to enter the winner of a game
+	//  - which game?
+	fmt.Print("Enter the game to update: ")
+	fmt.Scanln(&gameNumber)
+	//  - who won?
+	fmt.Printf("Winner of game %d: ", gameNumber)
+	fmt.Scanln(&winner)
+	// update the rankings
+	//  - assume p1 in each game is the higher ranked
+	//  - only update rankings if the lower ranked player wins
+	if games[gameNumber-1].p2.First == winner {
+		// determine the index of p1 in our chessGroup
+		// based on the game number
+		index := (gameNumber - 1) * 2
+		swap := chessGroup[index].Rank
+		chessGroup[index].Rank = chessGroup[index+1].Rank
+		chessGroup[index+1].Rank = swap
+	}
+
+	// Sort the players in chessGroup by rank
 
 	savePlayers("output.txt", chessGroup)
 
