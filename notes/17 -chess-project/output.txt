@@ -1,4 +1,0 @@
-Obi,Josh,Baker,2
-Xu,George,Deroche,1
-Zhang,Gloria,Bishop,3
-Zuo,Vicky,Deroche,4

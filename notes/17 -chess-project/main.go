@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -17,12 +18,13 @@ func main() {
 
 	//fmt.Println(chessGroup)
 
+	// Create games between players with adjacent rankings
 	games := createGames(chessGroup)
 	displayGames(games)
 
 	// Ask Mr. Profit to enter the winner of a game
 	//  - which game?
-	fmt.Print("Enter the game to update: ")
+	fmt.Print("\nEnter the game to update: ")
 	fmt.Scanln(&gameNumber)
 	//  - who won?
 	fmt.Printf("Winner of game %d: ", gameNumber)
@@ -33,13 +35,14 @@ func main() {
 	if games[gameNumber-1].p2.First == winner {
 		// determine the index of p1 in our chessGroup
 		// based on the game number
-		index := (gameNumber - 1) * 2
+		index := (gameNumber - 1) * 2 // Game #1 -> index=0; Game #2 -> index-2, etc.
 		swap := chessGroup[index].Rank
 		chessGroup[index].Rank = chessGroup[index+1].Rank
 		chessGroup[index+1].Rank = swap
 	}
 
 	// Sort the players in chessGroup by rank
+	sort.Sort(chessGroup)
 
 	savePlayers("output.txt", chessGroup)
 
