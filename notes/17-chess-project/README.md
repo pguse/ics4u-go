@@ -1,12 +1,24 @@
-# ChessRank
+# Chess Ranking Project
 
-## Chess Ranking Project
+## Task
 
-Create a chess ranking program that creates the rank of each player in the chess arts period, based on wins/losses and number of games played.  An example of a ranking system can be found at this link.
+	Mr. Profit has asked us to create a Go program that helps him keep track of chess player ratings in his Fall Arts Period.  The initial version of the program is provided here.  It loads student information from a file and stores the modified information in another file.
+	
+	Mr. Profit would like us to improve our program in the following ways.
+	
+	
+		1. He would like us to create a menu with the following options for him to choose,
+		
+			i. Update a game result
+			ii. Add a student to the group
+					a) If there are an odd number of students, add Mr. Profit as a student.  Assume he has the lowest rank and that he is in Deroche.
+			iii. Remove a student from the group
+					a) If there are an odd number of students, add Mr. Profit as a student.  Assume he has the lowest rank and that he is in Deroche.
+			iv. Quit the program and store the updated results in the output.txt file.  Students should be sorted by rank, before writing to the file.
+					
+		There should be a menu() function in your program.
+		
+		2. At the moment the ratings of players are swapped if it benefits the player that wins.  He would like us to modify the ratings in the following way.
+			§ For each win, add the opponent's rating (rank) plus 400 to the winning student's rating (rank),
+			§ For each loss, add the opponent's rating (rank) minus 400 to the losing student's rating (rank).
 
-* Think about the properties of each student that you wish to save:  For example, last name, first name, house league, ranking ...
-* Think about how you are going to structure your data: object-oriented or using a list of dictionaries.
-* Eventually, you need to store the student information in a file.  How will you save the data in the text file?
-* How will you have Mr. Profit enter the information for each player?  It needs to be relatively easy to do during the arts period.
-* Create a function/method that will sort the data according to rank.
-* Create a function/method that will pair up players for a tournament according to their rank.  This could consist of different functions/methods:  top-half plays each other & bottom-half plays each other, different houses play each other, ...
