@@ -18,5 +18,5 @@ Mr. Profit would like us to improve our program in the following ways.
        - There should be a **menu** function in your program.
 
 2. At the moment the ratings of players are swapped if it benefits the player that wins.  He would like us to modify the ratings in the following way.
-..* For each win, add the opponent's rating (rank) plus 400 to the winning student's rating (rank),
-..* For each loss, add the opponent's rating (rank) minus 400 to the losing student's rating (rank).
+    -  For each win, add the opponent's rating (rank) plus 400 to the winning student's rating (rank),
+    - For each loss, add the opponent's rating (rank) minus 400 to the losing student's rating (rank).
