@@ -48,6 +48,18 @@ func main() {
 
 }
 
+func menu() int {
+	var option int
+
+	fmt.Println("1 - Enter game result")
+	fmt.Println("\n2 - Quit")
+
+	fmt.Println("Enter an option: ")
+	fmt.Scanln(&option)
+
+	return option
+}
+
 func loadPlayers(filename string) Group {
 	g := Group{}
 
