@@ -33,6 +33,8 @@ func menu(games []Game, chessGroup Group) {
 	switch option {
 	case 1:
 		updateGames(games, chessGroup)
+		fmt.Println()
+		menu(games, chessGroup)
 	case 2:
 		// Sort the players in chessGroup by rank
 		sort.Sort(chessGroup)
