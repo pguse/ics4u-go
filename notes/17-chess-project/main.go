@@ -10,54 +10,34 @@ import (
 )
 
 func main() {
-	var gameNumber int
-	var winner string
 
 	fmt.Println("Welcome to the Chess Project!\n")
 	chessGroup := loadPlayers("students.txt")
 
-	//fmt.Println(chessGroup)
-
 	// Create games between players with adjacent rankings
 	games := createGames(chessGroup)
-	displayGames(games)
 
-	// Ask Mr. Profit to enter the winner of a game
-	//  - which game?
-	fmt.Print("\nEnter the game to update: ")
-	fmt.Scanln(&gameNumber)
-	//  - who won?
-	fmt.Printf("Winner of game %d: ", gameNumber)
-	fmt.Scanln(&winner)
-	// update the rankings
-	//  - assume p1 in each game is the higher ranked
-	//  - only update rankings if the lower ranked player wins
-	if games[gameNumber-1].p2.First == winner {
-		// determine the index of p1 in our chessGroup
-		// based on the game number
-		index := (gameNumber - 1) * 2 // Game #1 -> index=0; Game #2 -> index-2, etc.
-		swap := chessGroup[index].Rank
-		chessGroup[index].Rank = chessGroup[index+1].Rank
-		chessGroup[index+1].Rank = swap
-	}
-
-	// Sort the players in chessGroup by rank
-	sort.Sort(chessGroup)
-
-	savePlayers("output.txt", chessGroup)
+	menu(games, chessGroup)
 
 }
 
-func menu() int {
+func menu(games []Game, chessGroup Group) {
 	var option int
 
-	fmt.Println("1 - Enter game result")
-	fmt.Println("\n2 - Quit")
+	fmt.Println("1 - Enter Game Result")
+	fmt.Println("2 - Quit")
 
-	fmt.Println("Enter an option: ")
+	fmt.Print("\nEnter an option: ")
 	fmt.Scanln(&option)
 
-	return option
+	switch option {
+	case 1:
+		updateGames(games, chessGroup)
+	case 2:
+		// Sort the players in chessGroup by rank
+		sort.Sort(chessGroup)
+		savePlayers("output.txt", chessGroup)
+	}
 }
 
 func loadPlayers(filename string) Group {
@@ -99,7 +79,32 @@ func createGames(g Group) []Game {
 	return games
 }
 
+func updateGames(games []Game, chessGroup Group) {
+	var gameNumber int
+	var winner string
+
+	displayGames(games)
+
+	fmt.Print("\nEnter the game to update: ")
+	fmt.Scanln(&gameNumber)
+
+	fmt.Printf("Winner of game %d: ", gameNumber)
+	fmt.Scanln(&winner)
+	// update the rankings
+	//  - assume p1 in each game is the higher ranked
+	//  - only update rankings if the lower ranked player wins
+	if games[gameNumber-1].p2.First == winner {
+		// determine the index of p1 in our chessGroup
+		// based on the game number
+		index := (gameNumber - 1) * 2 // Game #1 -> index=0; Game #2 -> index-2, etc.
+		swap := chessGroup[index].Rank
+		chessGroup[index].Rank = chessGroup[index+1].Rank
+		chessGroup[index+1].Rank = swap
+	}
+}
+
 func displayGames(games []Game) {
+	fmt.Println()
 	for i, g := range games {
 		fmt.Printf("Game %d: %v\n", i+1, g)
 	}
