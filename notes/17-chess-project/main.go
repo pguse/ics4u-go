@@ -9,7 +9,7 @@ import (
 	"strings"
 )
 
-const filename = "students.txt"
+const filename = "students.csv"
 
 func main() {
 
