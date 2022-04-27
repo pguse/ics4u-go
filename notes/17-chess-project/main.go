@@ -19,7 +19,6 @@ func main() {
 	games := createGames(chessGroup)
 
 	menu(games, chessGroup)
-
 }
 
 func menu(games []Game, chessGroup Group) {
