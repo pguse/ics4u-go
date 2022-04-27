@@ -9,10 +9,11 @@ import (
 	"strings"
 )
 
+const filename = "students.txt"
+
 func main() {
 
-	fmt.Println("Welcome to the Chess Project!\n")
-	chessGroup := loadPlayers("students.txt")
+	chessGroup := loadPlayers()
 
 	// Create games between players with adjacent rankings
 	games := createGames(chessGroup)
@@ -23,8 +24,8 @@ func main() {
 
 func menu(games []Game, chessGroup Group) {
 	var option int
-
-	fmt.Println("1 - Enter Game Result")
+	fmt.Println("Welcome to the Chess Project!")
+	fmt.Println("\n1 - Enter Game Result")
 	fmt.Println("2 - Quit")
 
 	fmt.Print("\nEnter an option: ")
@@ -38,11 +39,11 @@ func menu(games []Game, chessGroup Group) {
 	case 2:
 		// Sort the players in chessGroup by rank
 		sort.Sort(chessGroup)
-		savePlayers("output.txt", chessGroup)
+		savePlayers(chessGroup)
 	}
 }
 
-func loadPlayers(filename string) Group {
+func loadPlayers() Group {
 	g := Group{}
 
 	data, err := ioutil.ReadFile(filename)
@@ -62,7 +63,7 @@ func loadPlayers(filename string) Group {
 	return g
 }
 
-func savePlayers(filename string, g Group) {
+func savePlayers(g Group) {
 	f, err := os.Create(filename) // creates a file at current directory
 	if err != nil {
 		fmt.Println(err)
@@ -95,13 +96,17 @@ func updateGames(games []Game, chessGroup Group) {
 	// update the rankings
 	//  - assume p1 in each game is the higher ranked
 	//  - only update rankings if the lower ranked player wins
+	index := (gameNumber - 1) * 2 // Game #1 -> index=0; Game #2 -> index-2, etc.
 	if games[gameNumber-1].p2.First == winner {
 		// determine the index of p1 in our chessGroup
 		// based on the game number
-		index := (gameNumber - 1) * 2 // Game #1 -> index=0; Game #2 -> index-2, etc.
 		swap := chessGroup[index].Rank
-		chessGroup[index].Rank = chessGroup[index+1].Rank
-		chessGroup[index+1].Rank = swap
+		chessGroup[index].Rank += chessGroup[index+1].Rank - 400
+		chessGroup[index+1].Rank += swap + 400
+	} else {
+		swap := chessGroup[index].Rank
+		chessGroup[index].Rank += chessGroup[index+1].Rank + 400
+		chessGroup[index+1].Rank += swap - 400
 	}
 }
 

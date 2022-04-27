@@ -9,7 +9,7 @@ func (g Group) Len() int {
 }
 
 func (g Group) Less(i, j int) bool {
-	return g[i].Rank < g[j].Rank
+	return g[j].Rank < g[i].Rank
 }
 
 func (g Group) Swap(i, j int) {
@@ -19,7 +19,7 @@ func (g Group) Swap(i, j int) {
 func (g Group) String() string {
 	group := ""
 	for _, s := range g {
-		group += fmt.Sprintf("%v\n", s)
+		group += fmt.Sprintf("%v\r\n", s)
 	}
-	return group[:len(group)-1]
+	return group[:len(group)-2]
 }
