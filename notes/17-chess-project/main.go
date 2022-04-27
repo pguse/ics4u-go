@@ -23,7 +23,7 @@ func main() {
 
 func menu(games []Game, chessGroup Group) {
 	var option int
-	fmt.Println("Welcome to the Chess Project!")
+	fmt.Println("\nWelcome to the Chess Project!")
 	fmt.Println("\n1 - Enter Game Result")
 	fmt.Println("2 - Quit")
 
@@ -33,7 +33,6 @@ func menu(games []Game, chessGroup Group) {
 	switch option {
 	case 1:
 		updateGames(games, chessGroup)
-		fmt.Println()
 		menu(games, chessGroup)
 	case 2:
 		// Sort the players in chessGroup by rank
